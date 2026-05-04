@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "silver-light": "#E8ECF0",
+                    "on-primary-fixed-variant": "#84232a",
+                    "text-dark": "#1A0305",
+                    "surface-bright": "#f9f9f7",
+                    "primary-fixed": "#ffdad9",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eeeeec",
+                    "silver-bright": "#F5F6F8",
+                    "surface-variant": "#e2e3e1",
+                    "on-secondary-container": "#785d00",
+                    "maroon-light": "#A52535",
+                    "on-surface": "#1a1c1b",
+                    "tertiary-fixed-dim": "#bfc7d3",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "maroon-mid": "#8B1A2A",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#e6c364",
+                    "surface-container-low": "#f4f4f2",
+                    "border-subtle": "rgba(192, 200, 212, 0.35)",
+                    "outline": "#8a7171",
+                    "background": "#f9f9f7",
+                    "tertiary-container": "#2e363f",
+                    "on-background": "#1a1c1b",
+                    "secondary-fixed": "#ffe08f",
+                    "tertiary": "#19212a",
+                    "maroon-deep": "#3D0408",
+                    "on-tertiary-fixed": "#141c25",
+                    "on-tertiary-fixed-variant": "#3f4751",
+                    "inverse-on-surface": "#f1f1ef",
+                    "footer-bg": "#1A0003",
+                    "secondary": "#755b00",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#dbe3ef",
+                    "primary-container": "#6b0f1a",
+                    "surface-tint": "#a43a3f",
+                    "surface-container-high": "#e8e8e6",
+                    "primary": "#49000a",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#fed977",
+                    "on-tertiary-container": "#979faa",
+                    "surface-container-highest": "#e2e3e1",
+                    "on-surface-variant": "#564241",
+                    "on-secondary-fixed-variant": "#584400",
+                    "on-secondary-fixed": "#241a00",
+                    "surface": "#f9f9f7",
+                    "outline-variant": "#ddc0bf",
+                    "on-primary-container": "#f4777a",
+                    "on-primary-fixed": "#410008",
+                    "text-body": "#444444",
+                    "surface-dim": "#dadad8",
+                    "inverse-primary": "#ffb3b2",
+                    "inverse-surface": "#2f3130",
+                    "gold-light": "#E2C46A"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding-v": "90px",
+                    "grid-gap-lg": "80px",
+                    "section-padding-h": "32px",
+                    "card-padding": "28px",
+                    "grid-gap-md": "32px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "nav-link": ["DM Sans"],
+                    "tagline-italic": ["Cormorant Garamond"],
+                    "h1": ["Playfair Display"],
+                    "h2": ["Playfair Display"],
+                    "eyebrow": ["DM Sans"],
+                    "decorative-numeral": ["Cormorant Garamond"],
+                    "stat-number": ["Playfair Display"],
+                    "body": ["DM Sans"],
+                    "h3": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "nav-link": ["13.5px", {"letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "tagline-italic": ["20px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h1": ["58px", {"lineHeight": "1.07", "fontWeight": "900"}],
+                    "h2": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "eyebrow": ["11px", {"letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "decorative-numeral": ["48px", {"fontWeight": "400"}],
+                    "stat-number": ["44px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "body": ["15px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(26, 3, 5, 0.7), rgba(26, 3, 5, 0.7)), url('image-hero-placement.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 196, 106, 0.2);
+        }
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-maroon-mid selection:text-white">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 border-b-[3px] border-[#6B0F1A] bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto">
+<a class="text-lg font-black font-['Playfair_Display'] text-[#6B0F1A] dark:text-amber-500 uppercase tracking-tighter" href="index.html">
+                RMDIT Polytechnic
+            </a>
+<nav class="hidden lg:flex items-center space-x-8 font-['Playfair_Display'] text-sm tracking-wide uppercase font-semibold">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="index.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Admission.html">Admissions</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Programmes.html">Programmes</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Faculty.html">Faculty</a>
+<a class="text-[#6B0F1A] dark:text-amber-500 font-bold border-b-2 border-[#6B0F1A] pb-1" href="Placement.html">Placements</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-maroon-mid">search</button>
+<a class="bg-[#6B0F1A] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-maroon-deep transition-all duration-300 active:scale-95 shadow-lg" href="Admission.html">
+                    Apply Now
+                </a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A grand, modern architectural perspective of a high-tech corporate campus at sunset. The lighting is dramatic and cinematic, with golden hour rays reflecting off glass facades. The scene embodies professional excellence and global career aspirations, featuring a clean, high-contrast academic aesthetic with subtle maroon and gold tones in the sky and shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzgKnRLs2NrhAClND04nLVUPPhiK4XXiB8QWyOB_4ZIum5453SpZ6ehZkuU6Rb9UR-eWD4yZu4IPnHeWxz5QWJfN7w5pfZTt8Ma3JsU8E1CflUA_ZkUJlhyTTiv0skEtrISHilKLUqjC5IBjlJLG-xXtQsk24f-SJhBwfOpwOzqfw0GM9ctmodhlhu1fCChSlDltFh1aYgLpaESVG-nLC_w6dPuf2KhoGoYqBWD52ydxpTDI-fjeBRMqZxCuQSayfGskDmKG_QD2k"/>
+<div class="absolute inset-0 bg-gradient-to-r from-maroon-deep/90 via-maroon-deep/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1280px] mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<span class="font-eyebrow text-eyebrow text-gold-light uppercase block mb-4">Placements &amp; Career Cell</span>
+<h1 class="font-h1 text-h1 text-white mb-6">Global Career Opportunities</h1>
+<p class="font-tagline-italic text-tagline-italic text-silver-light/80 italic mb-8">Bridging the gap between academic rigor and industrial leadership with a network that spans continents.</p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-r from-secondary-fixed to-gold-light text-maroon-deep px-8 py-4 font-bold text-sm tracking-widest uppercase rounded shadow-lg shadow-black/20 hover:-translate-y-1 transition-transform">Download Brochure</button>
+<button class="border border-white/30 text-white px-8 py-4 font-bold text-sm tracking-widest uppercase rounded hover:bg-white/10 transition-colors">View All Partners</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stat Dashboard -->
+<section class="bg-maroon-deep py-24 relative overflow-hidden">
+<!-- Decorative Radial Glows -->
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-maroon-light/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/2"></div>
+<div class="max-w-[1280px] mx-auto px-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center md:border-r border-white/10 px-4">
+<div class="font-stat-number text-stat-number text-gold-light mb-2">95%</div>
+<div class="font-eyebrow text-eyebrow text-silver-light/60 uppercase">Consistent Placement Record</div>
+<p class="mt-4 text-white/70 text-sm leading-relaxed">Achieving near-perfect employment rates for five consecutive academic cycles.</p>
+</div>
+<div class="text-center md:border-r border-white/10 px-4">
+<div class="font-stat-number text-stat-number text-gold-light mb-2">150+</div>
+<div class="font-eyebrow text-eyebrow text-silver-light/60 uppercase">Tier-1 Recruiters</div>
+<p class="mt-4 text-white/70 text-sm leading-relaxed">Direct partnerships with Fortune 500 giants and innovative emerging tech leaders.</p>
+</div>
+<div class="text-center px-4">
+<div class="font-stat-number text-stat-number text-gold-light mb-2">12 LPA</div>
+<div class="font-eyebrow text-eyebrow text-silver-light/60 uppercase">Highest CTC Package</div>
+<p class="mt-4 text-white/70 text-sm leading-relaxed">Exceptional valuation for our graduates in specialized technical and engineering roles.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recruiter Wall -->
+<section class="py-24 bg-white">
+<div class="max-w-[1280px] mx-auto px-8 text-center">
+<span class="font-eyebrow text-eyebrow text-maroon-mid uppercase block mb-4">Our Hiring Ecosystem</span>
+<h2 class="font-h2 text-h2 text-text-dark mb-16">Global Industry Partners</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-px bg-stone-200 border border-stone-200 overflow-hidden rounded-lg">
+<!-- Partner Logos -->
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="TCS" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCsu2Y9UbBq3pfzVGvh8C1MzYmhJQqZNJFfGcOfVY83C51FAKLmkGIgczhXqjK93AvnwVNc9lVRjt9L4Zd_x4c1ppPPS4C6DugfaEn12VB4fgqwa9Kzl0dZwNDLAR--hEbsVELkYgxjYPu6O14hJJeeSGOtoYuxJVOPA__NB4jGluLfBYvdCjVtruX_ZP765Xrfo5onhtyG0EBkmAPXcTIHT5RLg3TX5MhM-dU2J5aECKZmdR8qFc1KVpDYDu15h-rDRmKBiFlJXA"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="Infosys" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGV3OG28oCrSN9igcpuRoEh1477NzYLNDMwl-EcvH7xIw1RMcj0N8OH1jb8_mKDNhcJcMYyepywwxVLKtlFO4S8Z204HnL05MNlWB0Dz5AErKnHleFaW2vIHuRbo3laRFWEt9o8z3H09caGEGsXKoTvRLnsdqFpfqqXfFccbpHZNbH506OLHQj1npFtGiawTpgtCHT5NB2pr-V7ybKH4-NthNuXecOJ6oXsKOYCO6CukU7UrsrNAc_UbgMAahpo5HndnFIABlQKU0"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="Reliance" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeqXrGUyvhzkgIEEVxJhQ30N_i7DOB6sfSEyiSrtMMLQrXeeQPyudHh2xAu47uUCl2nKQMOO41e3N7Fd5ZPsYMr5jsblQNzxg1nmlHFvmpURYrKQ_a7_etXdwwHDslJfbXJMhYrmy8FhrkTthXRzHm9dfva3451jvBmRjQeJRkNmj7c_-_Nlg35PC2ZhRpuOzShZdfjKABbA99jUJIeFCFtNquJYmVSiEZhqNEdFevmUQqg77eTwSjR6h2VEYyZLa8-U79p9ZTy24"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="L&amp;T" class="max-h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOiGxJfG0kiyNSKcDRoCKAg-MLf0cgrlOFpXqq0tUsPhbVanVTJsobpmG5aO2yN8vddR-c5d5IxWgF24jBiP_E8X_TXBSs3ilAjVauKPoEOA3CD6n2IboGyD2xRmwxAUt1G-hjQY_JUxOODnW32_i7mVXuhWs1Ozv7Tq9HYhfoC-gAS26IcQZuwTsZD2tbQUJeyPiAN1XO6yBJ0DG99yhIbOCCIA-UXKUSd5e3eNdC4OQycGQukz74V0ZubYmOmjPRYJj7RknYXS4"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="Wipro" class="max-h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC37wc-wIBxmy5jxAM7B0E4StKdjzyU-72oJTy3Jhx77y5srYfyuBCcEIb01BUlk8N-kl8DPU9d3dSSJILkkNbDuvFLCXtCf2svIjsYBtwFLQsHg-6IQzQYqsWWaSeSO45e2dP4qwzqjn4gfMpyjRF3pElIsrA2jcm-1sQwOl44lEQy-nYReBZFHpAPegYWHIe9ViSyksrNgpt1tBL9_xdfpY7r72LV8hYsHkmYF5oXdwrVWEVYSMRKuTyoEGOSi-NZEDrSSUnd6J0"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="Mahindra" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5BsFJNWl8zg73V1eVb-bB9MfMoGtRiWMedVC7WpMSxDcUhYEMWEDiULA2TYpEW8JVXkLsMEAV6Tk66y3xXcx0Bs4rfxJQqh591dke9k3IY6h4ZvD1WR1Q1WdxqybYQp4l-BkM67oAdux4t478UEdKJJaVvtJIhxomN0j7nY88ccNc_KlPffZ7HBtNtVyKcqrMMZKIuXZvGApnMPmZ9n1QWGstrGYkgOB2FfCfG8n421NTPaAP_cHPzpR54wvug4zlEU72ZvCmgsk"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="HCL" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB822Sqjvrr0GMHrj-aHFvjtinvr-tEh-CjmeX6Ts1ICPZr6QG4lcC3G0cXZXDtCIRizLgO99OidVYEr22DxkRTQlwOnK7XK_rhxP2kePTJChEPNQbUlI0y17uFAjw165mpd5vyew89c8iZ8-B5tuYQC0CkJiG_Bv6nPJBx2moBVOESDosZNJQOXHTGN9QDSxeS9aeK83-617Nz6nlf6zW89sh50v5xYbvSypbbg0SB_t0muJvkS88HvbeQBuRGqMj4gSqaIilYZS0"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="Accenture" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9drvkSTr74hhK6pqQo-4ZheqDTLvAKt6owM8i9Y_zohPPy4paKYl1y_AsGULHj5hC2P-y1rQOQCpYYUBXGzwKPscEmkdrDUTVOrVS5ck-cPs9xBJEUXYHzaBJI1B7PVkN9n48S-Gneu9O0YkzVU_pkBA1ahDVqEcoDrGVp0AmWXJ967XW-hjCCYO0irC0vNZyHKQZ7MSXQR9Zwp12e9gJdzMGhxUM0SJeACHaO231UIXDnMzurRvo_HsncW3RVNQIzUJIQi9lNM8"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="Amazon" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9WISEnuY5lTTKVQGcfTaWRkpEn8B9h6PZU8RMPbBgspMn99OF0Zzs0kKV_6fuR9o9wiQaG8Z8mBZrn9uwYHplnbFdZ37EuoGWBYeC0FRhFeNzztdpMQFvSCTqzBbuevNcA5EX5JOOVjw4C7yAS6NF9glLco4lkz8O3pjIkZ4Ll_xjtDvnYhXT-SXKcc9oslyN-a9UdwSKc17VWKu6xHG0ReoCqquB7NHuIuKSsfHxCL2QkX0jtl75sxOvKepY7OK5WFNJqlsyvic"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="Honda" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD73sJnL1uApHNBescR2anWCvIpyNNveQiXAHT6tFsQJxPLyWHOjV4YPDNr8ByHL1PREcLV1brXK_hvv1uBbCw71xfKe6uDTTTASDdA2r3PXsKUUBpWBlXnYqZVwna_8HCQtIw2llbzDepNz_MIx9VYTaA_Shc1K8E8VidTNNzs16HmAJeJ-NI-j7XZen_SMwHgJPS7fvhYt4Jy0mbgqLbX8kiE-vjJ90YNlKzkEEg-b0AOubz1wuuZsgl7Fw6qc8bctftc8JPkhFo"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="Cognizant" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBByXmerqJ78X50wOTlT8B3amZJO-7jt8dctNkhqFAyWmpT5UqEUbw6uXvYhXBE3zLDqmD_AwZILyPiJdLG_UsriDiKhyBHmxLRKgLP-e9KJWPziuSRyb74fNnS7cWLrlQdgnBA1rcToCrBfqhE-bbKmz1tNavNMGBz978Se9xNdIv8lFy9o-Y1xQrBVYiPRWnk7MEvjYOY3Ri41bw_yq-oDfRLyre6zNVZbm3rgtIXdLJ8pbWEiRGHrLX3AJyCmfNlc3iUJuysQig"/>
+</div>
+<div class="bg-white p-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 h-32">
+<img alt="Intel" class="max-h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAr-0F0oVJmDpH0NM_Hq-oBWgRhheRIb9-EGLpBhD3IbcvFJjDZwTyNOpg3AtIDyMuo07HJJqsgLATbbYzqn1TUSHz2UpQq2N9WGnRnjen0LDb7cE7ZNxJrh4f7Ah65T-fHVUuB8WTy2erVpS-E2AK-ykdjUiOt0iGY07LeLeCF4IVLhaeKYpt-Qr9O6d66mqysbQt_v0WrnWBbTOJxL4q3DLWU2HiVyEkSrza9S7FCxJO5OOlA4LEIZ05fchJc6thTNKt21_zXTk"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Placement Cell / Training -->
+<section class="py-24 bg-surface-container-low border-t border-stone-200">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5">
+<span class="font-eyebrow text-eyebrow text-maroon-mid uppercase block mb-4">Training &amp; Development</span>
+<h2 class="font-h2 text-h2 text-text-dark mb-8 leading-tight">Empowering Professionals for a Dynamic Workforce</h2>
+<p class="text-body text-text-body mb-8">Our dedicated Placement Cell serves as a finishing school, refining the innate potential of every student through rigorous technical and behavioral training modules.</p>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="w-12 h-12 flex-shrink-0 bg-maroon-mid/10 flex items-center justify-center text-maroon-mid rounded">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<h4 class="font-h3 text-lg font-bold text-maroon-deep">Soft Skills Mastery</h4>
+<p class="text-sm text-text-body">Focused training on communication, leadership, and professional etiquette.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-12 h-12 flex-shrink-0 bg-maroon-mid/10 flex items-center justify-center text-maroon-mid rounded">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<div>
+<h4 class="font-h3 text-lg font-bold text-maroon-deep">Technical Bootcamps</h4>
+<p class="text-sm text-text-body">Intensive industry-aligned certification programs in emerging technologies.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-12 h-12 flex-shrink-0 bg-maroon-mid/10 flex items-center justify-center text-maroon-mid rounded">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<div>
+<h4 class="font-h3 text-lg font-bold text-maroon-deep">Mock Drill Series</h4>
+<p class="text-sm text-text-body">Simulated interview environments conducted by senior industry veterans.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="rounded-xl overflow-hidden shadow-2xl h-64">
+<img class="w-full h-full object-cover" data-alt="A professional close-up shot of a diverse group of engineering students engaged in a technical workshop. They are working with advanced robotic arms and circuitry in a bright, modern laboratory. The environment is clean, scholarly, and filled with focused energy, using a cool silver and white palette with deep maroon accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzThxaEyqHXDjESoTiJbysso1tk7J5g9bSTB9iy3YMrGvxm9fewreg1pXmMbEQj5w348C4UJ7MTbhIL_A_ik6E5ExHpmg7rWeGo8cHDLE4V9N0rMdPA4CRasOrx0jWdzgogpSv4Xh5nQRqR-Qb5-nyQT11yXa2BVmztRah5Z1aZbaVC3hMFVpHS46q1v675QNOiyBPJCd01Fc4l_Ycekdfw-7bdGuNWK1pltXdJb4Ss0QPjZJ7QWuZkESLEDkRSCiKD8-WVoAVxRI"/>
+</div>
+<div class="bg-maroon-mid p-8 rounded-xl text-white">
+<div class="font-decorative-numeral text-decorative-numeral text-gold-light opacity-50 mb-4">01</div>
+<h3 class="font-h3 text-xl mb-2">Industry Internships</h3>
+<p class="text-sm opacity-80">Mandatory 6-month industry immersion for practical expertise.</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-secondary-container p-8 rounded-xl text-maroon-deep">
+<div class="font-decorative-numeral text-decorative-numeral text-maroon-mid opacity-30 mb-4">02</div>
+<h3 class="font-h3 text-xl mb-2">Alumni Mentorship</h3>
+<p class="text-sm opacity-80">One-on-one guidance from successful RMDIT graduates across the globe.</p>
+</div>
+<div class="rounded-xl overflow-hidden shadow-2xl h-80">
+<img class="w-full h-full object-cover" data-alt="An editorial-style photograph of a corporate seminar hall where a guest lecturer from a major tech firm is addressing students. The lighting is focused and cinematic, creating a prestigious academic atmosphere. Students are taking notes on high-end laptops, reflecting a blend of traditional education and modern technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6uuRaDk7n_pNQJSSd94BdUSb6ClM0rSJoGAVl6m9tdBlf1CLedvMWFVkA6Bq6n3bO_nE3G8kcGnhqKiJjdCOUpyiRrMGBTmhtkeNxWFxHXfPtnM9JjYjwcv-ZoDnXLrtz0U3ix0RQwS6Rnw1GhdB2uzq8b6fr-g2U1nk6yvxPlVheDua5fOel1p6jTP8sMoyv2MFohrmtqJ6bEH0vmwCxUW-Rw0RFwg8t5wwQzJWwLM1U7eZPe6fDEcaEisqyHr01dIO5w4xeYzU"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories -->
+<section class="py-24 bg-white overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-xl">
+<span class="font-eyebrow text-eyebrow text-maroon-mid uppercase block mb-4">Alumni Impact</span>
+<h2 class="font-h2 text-h2 text-text-dark">Stories of Excellence</h2>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-stone-200 flex items-center justify-center hover:bg-maroon-mid hover:text-white transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-stone-200 flex items-center justify-center hover:bg-maroon-mid hover:text-white transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial Card 1 -->
+<div class="group bg-silver-bright p-card-padding rounded-xl border-b-4 border-transparent hover:border-maroon-mid hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young female software engineer in a business-casual setting. She has a confident, warm expression. The background is a softly blurred modern office. The lighting is bright and clean, capturing a high-end corporate portrait aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRQKY4uOmiwKSJeKTVek8ZbAtSBDFwo3fjTZOSsiCHog2YaS3YJPSAeu4HvDCE2VhQWdobx0pn3g3sdfUTUY2phx8bK0NyXtdzRn4HMy1tqWK7w0DvC47XizlN9EKVAHIGG5969vYnru4pmF4BXnyplIURW2e7GUCTvntggbsTjCtf_V5Cdn7NU8fG4tAij6tuGIgo1cXC76aB5H7ju1wWFCstHcd2tmqYdEfYkX0HTYY1cNfSiZkXHOYr1acEqkKVXbVsAG3YE_g"/>
+</div>
+<div>
+<h4 class="font-h3 text-base text-maroon-deep font-bold">Priya Sharma</h4>
+<p class="text-xs text-text-body font-eyebrow">Class of 2021</p>
+</div>
+</div>
+<p class="text-body italic text-text-body mb-8 leading-relaxed">"The rigorous training at RMDIT prepared me for the fast-paced environment at Microsoft. The placement cell's support was pivotal in my journey."</p>
+<div class="flex justify-between items-center pt-6 border-t border-stone-200">
+<img alt="Microsoft" class="h-5 grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyHadtnkuPWkTifKidkITYC3ufUAWo9umPTCut3bPeLqsHd8IC0uhmWxbMW48Wt1C-qtARdK_T_EymLngrD8bI0pPgm5AJVprcXh_FXkxcNJG4rlPxj5XR2m8hKZDHfKAhT_f4Tq7pCOWlEXBdqJkj2RJMjQjoxXEE5WPfRTNyvmSkU0p00rLVzdvQNA1z2bMbT5dafTn-dmbNGZ_jhCapXhHaUIc8hAcuZ_zxczOwD2qXgrPBL_lj9f9FK72Fc_iUkoxeAW-8fxw"/>
+<span class="text-xs font-bold text-maroon-mid uppercase tracking-widest">SDE II</span>
+</div>
+</div>
+<!-- Testimonial Card 2 -->
+<div class="group bg-silver-bright p-card-padding rounded-xl border-b-4 border-transparent hover:border-maroon-mid hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a confident male civil engineer wearing a modern suit. He is standing in front of an architectural model. The lighting is sophisticated and editorial, highlighting a successful career path in a prestigious engineering firm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6r6yyde6EQH7IRp6q6j3oGV0HXusm1oAto31oGCkwwHffymiut9GbAXvWCCY4hG9aG4fjg4bO8n1cwmhHZ6ox6oqxW1EScCoedmvbTK4d_9LiCi3UOkeT9X-ejiJia242KCrbXNY9EQhSXr-Asiomj1UviDouENg74GFSwBo4qE5vUhOy0v5eJsWteb6vRpAsuYWjHvoS1smrofdcj3XD2Kb5fTiJGc8pAEyOsxjF2l5dYbNR3VnGhWJz6THRn5csIZJ3sp7gZ0"/>
+</div>
+<div>
+<h4 class="font-h3 text-base text-maroon-deep font-bold">Arjun Varma</h4>
+<p class="text-xs text-text-body font-eyebrow">Class of 2019</p>
+</div>
+</div>
+<p class="text-body italic text-text-body mb-8 leading-relaxed">"RMDIT doesn't just teach engineering; it fosters leadership. I am now managing major infrastructure projects thanks to the foundation laid here."</p>
+<div class="flex justify-between items-center pt-6 border-t border-stone-200">
+<img alt="L&amp;T" class="h-7 grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRidNvSlKvKwOCMnRoPIGADSmZq-ObfjJOuayOwTQn0tVtBvQNlYDZg1LLn-LycZDIRysJaKr4pmvY-SKWZJxpXBEDue0-ZUZ7OiMCs8C2sMWF7Pht3L9Cfh8Eiamu22FXW_qUH2i1puTOFiPUu0BOmQcRgFMz4s8z3L22j0uPo5nLl_2h10L2irR3MQamuyN2XulqQY1todA2NDDEWggePLYzxa-W3IicgRvYdHQ-R9kJJ0RRe2XQsEkpg3hcjcuoO7UWumhlJys"/>
+<span class="text-xs font-bold text-maroon-mid uppercase tracking-widest">Lead Engineer</span>
+</div>
+</div>
+<!-- Testimonial Card 3 -->
+<div class="group bg-silver-bright p-card-padding rounded-xl border-b-4 border-transparent hover:border-maroon-mid hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-md">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young male data scientist in a modern tech workspace. He is smiling and wearing smart eyewear. The background is a stylish, minimalist office with subtle warm lighting, conveying success in the technology sector." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXU_wGJsvA5xoMmboI1Eq7gFvcAYWHOJ3ZPrA2enU_55UGNrZ8WwD58mVTEzOOBS230VPtR8iG_ggbGombT2Urul_pnEz2oBysAIFdPGPbZ21d05Q4x0G0pHZ-UaEIgX2y5qR0NRb1JDFZZ_MYTBC_pduXc0x8kCBVGXgoPb3smIENSYh8LSvdm_xCTRGiVRE1iCoXewB9Bxq1CJWDiVUeuxBidKklXd8drJ2RHhRWspfon0zU6yUPaZ7IAO1TkNX6el6ZRDZVn2Q"/>
+</div>
+<div>
+<h4 class="font-h3 text-base text-maroon-deep font-bold">Rohan Mehta</h4>
+<p class="text-xs text-text-body font-eyebrow">Class of 2020</p>
+</div>
+</div>
+<p class="text-body italic text-text-body mb-8 leading-relaxed">"From the first semester, the industry exposure at RMDIT was incredible. I transitioned from student to analyst seamlessly."</p>
+<div class="flex justify-between items-center pt-6 border-t border-stone-200">
+<img alt="TCS" class="h-5 grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFCFUTwWdUJeNKlbmVK6ZweKqFND1yITjBlcADTRj-WDs1ol3hkSBbMHTXS4agC2Dxqd7xTgCxuZPMHfeQzJT8NK0ffuRy-M2cu_S01BU2NZQ-5ToQqNX53Uz6IyrAtAz6S5eCD-NigWY3PvBLo07WULFsG7RDvNnE17haJcFfrYf4sb8rIigHiy_7HJApR6wb2-XMVcwch6YlyKmPObqLTBrglmjDwazVhwvnVuzlFJYk_O2EIe8WvM97O5UFNY-7pqAbJi6QfmE"/>
+<span class="text-xs font-bold text-maroon-mid uppercase tracking-widest">Data Analyst</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-maroon-deep relative">
+<div class="max-w-[1280px] mx-auto px-8 relative z-10 text-center">
+<h2 class="font-h2 text-h2 text-white mb-6">Ready to Start Your Journey?</h2>
+<p class="text-silver-light/70 max-w-2xl mx-auto mb-12">Connect with our placement advisors today to explore how RMDIT can accelerate your professional trajectory.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-gold-light text-maroon-deep px-10 py-4 font-bold text-sm tracking-widest uppercase rounded hover:scale-105 transition-transform">Contact Placement Cell</button>
+<button class="bg-transparent border border-white/20 text-white px-10 py-4 font-bold text-sm tracking-widest uppercase rounded hover:bg-white/5 transition-colors">Employer Relations</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#6B0F1A] dark:bg-stone-900 border-t-4 border-amber-500 w-full font-['Playfair_Display'] text-stone-200">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 py-20 px-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-bold text-amber-500 mb-6">RMDIT</div>
+<p class="font-body text-stone-300 text-sm leading-relaxed mb-6">
+                    Rasiklal M. Dhariwal Institute of Technology is dedicated to providing high-quality technical education that empowers students to achieve global standards of professional excellence.
+                </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="mailto:admissions@rmdit.edu.in">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="tel:+912135123456">
+<span class="material-symbols-outlined text-sm">phone_in_talk</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="index.html">Home</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Admission.html">Admissions</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Programmes</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Placement.html">Placements</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Faculty.html">Faculty</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Departments</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Computer Technology</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Mechanical Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Civil Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electronics &amp; Telecomm</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electrical Engineering</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Campus Location</h5>
+<p class="font-body text-stone-300 text-sm mb-6">
+                    Akurdi, Near Railway Station,<br/>
+                    Sector No. 27-A, Pradhikaran,<br/>
+                    Pune, Maharashtra 411044
+                </p>
+<div class="h-40 bg-stone-800 rounded-sm overflow-hidden grayscale">
+<img class="w-full h-full object-cover opacity-50" data-alt="A stylized digital map view showing the city of Pune, India, with a prominent pin marking the location of the RMDIT campus. The map uses a sophisticated dark-mode aesthetic with golden lines and markers, aligning with the premium institutional brand. The visualization is clean, professional, and emphasizes the strategic location of the institute." data-location="Pune, India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGNFSUJXY3Pr-4gYFepv09isUFA7jOdC-klGHziPjfLPuHDAKGDEWMLHGvcOdnpOTGJR_eUCdakfP4mvw5bVtD_dWS2UPb2iqicYhNFzIIsUAoNTP4KsHNds5ByPWwAuqvO5A1MiV1N_15aL8NTloJ_sMoOTfMyccaT2oZj9wgTMIRw2LXjE8SnbRFWE1ioVqCK202CPLyLM03jPXWMe_1pqyrBDM2Ak0bphUZiplzo5V5XrK6wKxgAjI_zoE3DzxQQ6p7E5kpmgc"/>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8">
+<div class="max-w-[1280px] mx-auto px-12 text-center text-stone-400 text-[11px] font-body tracking-widest uppercase">
+                © 2024 Rasiklal M. Dhariwal Institute of Technology. Institutional Excellence Since Inception.
+            </div>
+</div>
+</footer>
+</body></html>

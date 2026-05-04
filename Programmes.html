@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&amp;family=DM+Sans:wght@400;500;700&amp;family=Cormorant+Garamond:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "silver-light": "#E8ECF0",
+                        "on-primary-fixed-variant": "#84232a",
+                        "text-dark": "#1A0305",
+                        "surface-bright": "#f9f9f7",
+                        "primary-fixed": "#ffdad9",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeeec",
+                        "silver-bright": "#F5F6F8",
+                        "surface-variant": "#e2e3e1",
+                        "on-secondary-container": "#785d00",
+                        "maroon-light": "#A52535",
+                        "on-surface": "#1a1c1b",
+                        "tertiary-fixed-dim": "#bfc7d3",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "maroon-mid": "#8B1A2A",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#e6c364",
+                        "surface-container-low": "#f4f4f2",
+                        "border-subtle": "rgba(192, 200, 212, 0.35)",
+                        "outline": "#8a7171",
+                        "background": "#f9f9f7",
+                        "tertiary-container": "#2e363f",
+                        "on-background": "#1a1c1b",
+                        "secondary-fixed": "#ffe08f",
+                        "tertiary": "#19212a",
+                        "maroon-deep": "#3D0408",
+                        "on-tertiary-fixed": "#141c25",
+                        "on-tertiary-fixed-variant": "#3f4751",
+                        "inverse-on-surface": "#f1f1ef",
+                        "footer-bg": "#1A0003",
+                        "secondary": "#755b00",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#dbe3ef",
+                        "primary-container": "#6b0f1a",
+                        "surface-tint": "#a43a3f",
+                        "surface-container-high": "#e8e8e6",
+                        "primary": "#49000a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#fed977",
+                        "on-tertiary-container": "#979faa",
+                        "surface-container-highest": "#e2e3e1",
+                        "on-surface-variant": "#564241",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-secondary-fixed": "#241a00",
+                        "surface": "#f9f9f7",
+                        "outline-variant": "#ddc0bf",
+                        "on-primary-container": "#f4777a",
+                        "on-primary-fixed": "#410008",
+                        "text-body": "#444444",
+                        "surface-dim": "#dadad8",
+                        "inverse-primary": "#ffb3b2",
+                        "inverse-surface": "#2f3130",
+                        "gold-light": "#E2C46A"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding-v": "90px",
+                        "grid-gap-lg": "80px",
+                        "section-padding-h": "32px",
+                        "card-padding": "28px",
+                        "grid-gap-md": "32px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "nav-link": ["DM Sans"],
+                        "tagline-italic": ["Cormorant Garamond"],
+                        "h1": ["Playfair Display"],
+                        "h2": ["Playfair Display"],
+                        "eyebrow": ["DM Sans"],
+                        "decorative-numeral": ["Cormorant Garamond"],
+                        "stat-number": ["Playfair Display"],
+                        "body": ["DM Sans"],
+                        "h3": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "nav-link": ["13.5px", {"letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "tagline-italic": ["20px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h1": ["58px", {"lineHeight": "1.07", "fontWeight": "900"}],
+                        "h2": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "eyebrow": ["11px", {"letterSpacing": "0.15em", "fontWeight": "700"}],
+                        "decorative-numeral": ["48px", {"fontWeight": "400"}],
+                        "stat-number": ["44px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "body": ["15px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 border-b-[3px] border-[#6B0F1A] bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto">
+<a class="text-lg font-black font-['Playfair_Display'] text-[#6B0F1A] dark:text-amber-500 uppercase tracking-tighter" href="index.html">
+                RMDIT Polytechnic
+            </a>
+<nav class="hidden lg:flex items-center space-x-8 font-['Playfair_Display'] text-sm tracking-wide uppercase font-semibold">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="index.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Admission.html">Admissions</a>
+<a class="text-[#6B0F1A] dark:text-amber-500 font-bold border-b-2 border-[#6B0F1A] pb-1" href="Programmes.html">Programmes</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Faculty.html">Faculty</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Placement.html">Placements</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-maroon-mid">search</button>
+<a class="bg-[#6B0F1A] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-maroon-deep transition-all duration-300 active:scale-95 shadow-lg" href="Admission.html">
+                    Apply Now
+                </a>
+</div>
+</div>
+</header>
+<!-- Marquee Announcement -->
+<div class="bg-maroon-deep py-3 overflow-hidden whitespace-nowrap border-y border-gold-light/20">
+<div class="inline-block animate-marquee uppercase text-[10px] tracking-[0.3em] font-bold text-gold-light">
+            Admission Open for Academic Year 2024-25 <span class="mx-8 font-serif italic text-white opacity-50">⬥</span> 
+            Excellence in Technical Education <span class="mx-8 font-serif italic text-white opacity-50">⬥</span> 
+            AICTE Approved &amp; MSBTE Affiliated <span class="mx-8 font-serif italic text-white opacity-50">⬥</span> 
+            Admission Open for Academic Year 2024-25 <span class="mx-8 font-serif italic text-white opacity-50">⬥</span> 
+            Excellence in Technical Education
+        </div>
+</div>
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center overflow-hidden bg-maroon-deep">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-maroon-deep via-maroon-deep/80 to-transparent z-10"></div>
+<img alt="Academic Campus" class="w-full h-full object-cover grayscale opacity-40" data-alt="A cinematic, wide-angle shot of a grand, traditional university building with high columns and modern glass extensions. The scene is set during the golden hour with warm, low-sunlight creating long shadows and a rich, prestigious atmosphere. The image is professionally graded with high contrast, deep maroons in the shadows and luminous gold highlights, reflecting a blend of heritage and modern innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGhHzdC4O6QU494ddkKASYFAPsEg-YbHdwxCoQE4zS7XhTN8F_J0cc8LgKlkSVurMwz_Ck0gNTBOM0k7MhaLJ9dVW6NFs-_jR4mMp8qYdDBKrg0vBOwOu-HHa_5M58Obkxp3ahpep24-uUdEh_ax9c2eBBwgvvl3lMRhoY3B1PGpqQT-EzmlciJ01FNZkmo4jZvq1MBLnWXjJ-Yxro322g_LCDRkeY6-9nnE0mP84io3_sXOdPACVXDrJlEMA6R3N2S2H0JG820O0"/>
+</div>
+<div class="container mx-auto px-8 relative z-20 max-w-[1280px]">
+<div class="max-w-2xl">
+<span class="font-eyebrow text-eyebrow text-gold-light block mb-4">ENGINEERING THE FUTURE</span>
+<h1 class="font-h1 text-h1 text-white mb-6">World-Class Diploma <br/><span class="text-gold-light italic font-tagline-italic font-normal">Programmes</span></h1>
+<p class="font-body text-body text-silver-light/80 mb-8 max-w-lg">Empowering the next generation of engineers with industry-aligned curricula, cutting-edge labs, and a legacy of academic excellence since inception.</p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-r from-gold-light to-secondary-fixed text-maroon-deep px-8 py-4 font-bold text-sm uppercase tracking-widest shadow-[0_10px_20px_rgba(226,196,106,0.2)] hover:-translate-y-1 transition-all">Download Prospectus</button>
+<button class="border border-silver-light/30 text-white px-8 py-4 font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all">Explore Departments</button>
+</div>
+</div>
+</div>
+<!-- Decorative Radial Glows -->
+<div class="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-gold-light/10 blur-[100px] rounded-full"></div>
+<div class="absolute bottom-[-10%] left-[5%] w-[300px] h-[300px] bg-maroon-light/20 blur-[80px] rounded-full"></div>
+</section>
+<!-- Affiliation & Curriculum Section -->
+<section class="py-[90px] bg-surface-container-lowest">
+<div class="container mx-auto px-8 max-w-[1280px]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-block px-4 py-1 bg-maroon-light/5 border-l-4 border-maroon-mid">
+<span class="font-eyebrow text-eyebrow text-maroon-mid">GOVERNANCE &amp; CURRICULUM</span>
+</div>
+<h2 class="font-h2 text-h2 text-text-dark leading-tight">Industry-Aligned <br/>Academic Framework</h2>
+<p class="font-body text-body text-on-surface-variant">RMDIT Polytechnic is proudly affiliated with the Maharashtra State Board of Technical Education (MSBTE) and approved by AICTE. Our curriculum is designed to bridge the gap between theoretical knowledge and practical application, ensuring students are industry-ready from day one.</p>
+<div class="grid grid-cols-2 gap-8">
+<div class="border-l border-outline-variant pl-4">
+<span class="font-decorative-numeral text-decorative-numeral text-maroon-mid">01</span>
+<h3 class="font-h3 text-[18px] mb-2">Modern Pedagogy</h3>
+<p class="text-[13px] text-on-surface-variant">Project-based learning and interactive workshops.</p>
+</div>
+<div class="border-l border-outline-variant pl-4">
+<span class="font-decorative-numeral text-decorative-numeral text-maroon-mid">02</span>
+<h3 class="font-h3 text-[18px] mb-2">Holistic Growth</h3>
+<p class="text-[13px] text-on-surface-variant">Soft skills development integrated with core engineering.</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 border-[10px] border-gold-light/20 -translate-x-6 translate-y-6 -z-10 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></div>
+<img alt="Classroom" class="w-full h-[450px] object-cover shadow-2xl" data-alt="A modern, high-tech classroom setting at a premium polytechnic institute. Students are engaged in a collaborative project using high-end workstations and digital boards. The lighting is bright and architectural, highlighting the clean white walls and sophisticated wooden accents. The atmosphere is focused and intellectually vibrant, following a light-mode corporate aesthetic with subtle maroon and gold branding elements in the decor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_IeS6ajUcGvhJ5cutd8E_Xy0kqwDG68g6L5xgMF_s6Z5yY6Kehf_OUtLmwXd63OgHGfCmqvDs-Ssv-0Fg8EqcHjIGPVcVYqhng9MOcANm5AACcX8a3Xq_HAXWNPBHz-_wES__VFzl8LUcj8TChPcTDLlfO-6rUFmBHaNOCQGcfOFfsDzBQLLE9x3sYtk1Kxntj7f-8cVMs49_YWUXAN1yiCvDEbQfHjOv31aS9s_gkYHHx7Uj4xIOHLvKClfcneDU8DZ0puv4jY8"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Department Grid -->
+<section class="py-[90px] bg-white">
+<div class="container mx-auto px-8 max-w-[1280px]">
+<div class="text-center mb-16">
+<span class="font-eyebrow text-eyebrow text-maroon-mid">CORE DISCIPLINES</span>
+<h2 class="font-h2 text-h2 text-text-dark mt-2">Specialized Departments</h2>
+<div class="w-24 h-1 bg-gold-light mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Mechanical Engineering -->
+<div class="group bg-white border border-silver-light p-8 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-maroon-mid group-hover:bg-gold-light transition-colors"></div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-maroon-mid group-hover:scale-110 transition-transform">settings_suggest</span>
+<span class="font-decorative-numeral text-silver-light/30 text-6xl absolute top-8 right-8">01</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Mechanical Engineering</h3>
+<p class="font-body text-body text-on-surface-variant mb-6">Master the principles of energy, materials, and mechanics in our advanced CAD/CAM labs.</p>
+<div class="flex flex-col gap-3 pt-6 border-t border-silver-light">
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Intake Capacity</span>
+<span class="text-text-dark">120 Seats</span>
+</div>
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Duration</span>
+<span class="text-text-dark">3 Years (Full-Time)</span>
+</div>
+</div>
+</div>
+<!-- Computer Engineering -->
+<div class="group bg-white border border-silver-light p-8 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-maroon-mid group-hover:bg-gold-light transition-colors"></div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-maroon-mid group-hover:scale-110 transition-transform">terminal</span>
+<span class="font-decorative-numeral text-silver-light/30 text-6xl absolute top-8 right-8">02</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Computer Engineering</h3>
+<p class="font-body text-body text-on-surface-variant mb-6">Expertise in software development, cybersecurity, and emerging cloud technologies.</p>
+<div class="flex flex-col gap-3 pt-6 border-t border-silver-light">
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Intake Capacity</span>
+<span class="text-text-dark">180 Seats</span>
+</div>
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Duration</span>
+<span class="text-text-dark">3 Years (Full-Time)</span>
+</div>
+</div>
+</div>
+<!-- Civil Engineering -->
+<div class="group bg-white border border-silver-light p-8 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-maroon-mid group-hover:bg-gold-light transition-colors"></div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-maroon-mid group-hover:scale-110 transition-transform">architecture</span>
+<span class="font-decorative-numeral text-silver-light/30 text-6xl absolute top-8 right-8">03</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Civil Engineering</h3>
+<p class="font-body text-body text-on-surface-variant mb-6">Designing and constructing sustainable infrastructure for the modern world.</p>
+<div class="flex flex-col gap-3 pt-6 border-t border-silver-light">
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Intake Capacity</span>
+<span class="text-text-dark">60 Seats</span>
+</div>
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Duration</span>
+<span class="text-text-dark">3 Years (Full-Time)</span>
+</div>
+</div>
+</div>
+<!-- Electrical Engineering -->
+<div class="group bg-white border border-silver-light p-8 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-maroon-mid group-hover:bg-gold-light transition-colors"></div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-maroon-mid group-hover:scale-110 transition-transform">bolt</span>
+<span class="font-decorative-numeral text-silver-light/30 text-6xl absolute top-8 right-8">04</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Electrical Engineering</h3>
+<p class="font-body text-body text-on-surface-variant mb-6">From power grids to renewable energy systems, learn to power the future.</p>
+<div class="flex flex-col gap-3 pt-6 border-t border-silver-light">
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Intake Capacity</span>
+<span class="text-text-dark">60 Seats</span>
+</div>
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Duration</span>
+<span class="text-text-dark">3 Years (Full-Time)</span>
+</div>
+</div>
+</div>
+<!-- E&TC Engineering -->
+<div class="group bg-white border border-silver-light p-8 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-maroon-mid group-hover:bg-gold-light transition-colors"></div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-maroon-mid group-hover:scale-110 transition-transform">router</span>
+<span class="font-decorative-numeral text-silver-light/30 text-6xl absolute top-8 right-8">05</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Electronics &amp; Telecomm.</h3>
+<p class="font-body text-body text-on-surface-variant mb-6">Developing communication networks and embedded systems for the IoT era.</p>
+<div class="flex flex-col gap-3 pt-6 border-t border-silver-light">
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Intake Capacity</span>
+<span class="text-text-dark">60 Seats</span>
+</div>
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Duration</span>
+<span class="text-text-dark">3 Years (Full-Time)</span>
+</div>
+</div>
+</div>
+<!-- IT Engineering -->
+<div class="group bg-white border border-silver-light p-8 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-maroon-mid group-hover:bg-gold-light transition-colors"></div>
+<div class="mb-6 flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-maroon-mid group-hover:scale-110 transition-transform">cloud_sync</span>
+<span class="font-decorative-numeral text-silver-light/30 text-6xl absolute top-8 right-8">06</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Information Technology</h3>
+<p class="font-body text-body text-on-surface-variant mb-6">Data science, information security, and network management specialization.</p>
+<div class="flex flex-col gap-3 pt-6 border-t border-silver-light">
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Intake Capacity</span>
+<span class="text-text-dark">60 Seats</span>
+</div>
+<div class="flex justify-between items-center text-xs font-bold">
+<span class="text-maroon-mid uppercase tracking-widest">Duration</span>
+<span class="text-text-dark">3 Years (Full-Time)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Infrastructure Highlights (Bento Grid) -->
+<section class="py-[90px] bg-maroon-deep text-white">
+<div class="container mx-auto px-8 max-w-[1280px]">
+<div class="mb-12">
+<span class="font-eyebrow text-eyebrow text-gold-light">FACILITIES &amp; ECOSYSTEM</span>
+<h2 class="font-h2 text-h2 mt-2">World-Class Infrastructure</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[250px]">
+<div class="md:col-span-8 md:row-span-2 relative group overflow-hidden">
+<img alt="Advanced Lab" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="A futuristic robotics and mechatronics lab with gleaming white workstations, orange robotic arms, and high-precision testing equipment. The lab is lit with cool blue and sterile white surgical-grade lighting, creating a high-tech atmosphere. Students in dark maroon lab coats are working intently. The visual style is crisp, editorial, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByYi8m-GNKaTYDxiP1ty_3nl6-qNUTyMfnwOI2H6pxMj84TIvisIIKbvIE4VAzbZ4JZhtFf-_I6qTqc1yoeWS-ZHXlbyjIn1GWThycHY8XLoM0nSXQc-Gg1P96ZhK00xullzkfdI2eQvYKcSsZl1Pa1YGFHdZ22ZqhK-HHl2CqSN9miT0UUpZ-ZA_GozbZBsVt4fpVe-kVJqMBb5qeOi0fD34PzMFP9Yfg6zrss0B2Lv3Kh59WFy6NTqHwiAOQEI5n3iIr3AZzGow"/>
+<div class="absolute inset-0 bg-gradient-to-t from-maroon-deep via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8">
+<h3 class="font-h3 text-h3 text-gold-light">Center of Excellence Labs</h3>
+<p class="font-body text-silver-light/70 text-sm max-w-md">Equipped with the latest industry-standard machinery for Mechanical and Civil departments.</p>
+</div>
+</div>
+<div class="md:col-span-4 relative group overflow-hidden bg-white/5 border border-white/10 p-8 flex flex-col justify-end">
+<span class="material-symbols-outlined text-gold-light text-4xl mb-4">library_books</span>
+<h3 class="font-h3 text-xl mb-2">Central Digital Library</h3>
+<p class="text-xs text-silver-light/60">Over 50,000 volumes and global e-journal access.</p>
+</div>
+<div class="md:col-span-4 relative group overflow-hidden bg-white/5 border border-white/10 p-8 flex flex-col justify-end">
+<span class="material-symbols-outlined text-gold-light text-4xl mb-4">memory</span>
+<h3 class="font-h3 text-xl mb-2">GPU Computing Hub</h3>
+<p class="text-xs text-silver-light/60">Dedicated workstations for AI/ML and Rendering tasks.</p>
+</div>
+<div class="md:col-span-12 relative h-[300px] mt-6 group overflow-hidden">
+<img alt="Campus" class="w-full h-full object-cover opacity-30 grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-50" data-alt="An expansive aerial view of a modern university campus with manicured green lawns, sleek architectural pathways, and interconnected academic blocks. The lighting is bright morning sun, casting gentle shadows. The palette is dominated by the natural greens of the landscape and the clean whites and grays of the buildings, with subtle maroon accents on the institution's banners." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEQIMw8A9zLb1lhXc59DFGYPZxhk63zyVKso724DDhvyklzykOANz4HC35y2_9SPW2l_0CUwg_YszU--ZxZ0x44p1fSmC-HkmbUtJ_QOaA4L1qEjsQDlN3hwOrc1L0CkTU8b5d1UgHDjxC5yv8hF6-tuAOorrw-sGi6neCIhJV1CTHBVCPPIHmNLNYahHVsxLO5t8KIIzLWPnGHQgNCw8sqg2PXQmXMMZnqRugNq9qPvGySHpuwAkeBu75CJ_cbipmKmhljAA8K3o"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center px-8">
+<h2 class="font-h2 text-4xl mb-4">Innovation Incubator</h2>
+<p class="max-w-2xl mx-auto font-body text-silver-light">A collaborative space where department boundaries dissolve and students work on cross-disciplinary startups and research projects.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stat Bar -->
+<section class="bg-gold-light py-12">
+<div class="container mx-auto px-8 max-w-[1280px]">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-maroon-deep text-center">
+<div>
+<div class="font-stat-number text-stat-number mb-1">500+</div>
+<div class="font-eyebrow text-[10px] uppercase tracking-widest font-bold">Annual Intake</div>
+</div>
+<div>
+<div class="font-stat-number text-stat-number mb-1">45+</div>
+<div class="font-eyebrow text-[10px] uppercase tracking-widest font-bold">Cutting-Edge Labs</div>
+</div>
+<div>
+<div class="font-stat-number text-stat-number mb-1">98%</div>
+<div class="font-eyebrow text-[10px] uppercase tracking-widest font-bold">Placement Rate</div>
+</div>
+<div>
+<div class="font-stat-number text-stat-number mb-1">200+</div>
+<div class="font-eyebrow text-[10px] uppercase tracking-widest font-bold">Expert Faculty</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#6B0F1A] dark:bg-stone-900 border-t-4 border-amber-500 w-full font-['Playfair_Display'] text-stone-200">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 py-20 px-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-bold text-amber-500 mb-6">RMDIT</div>
+<p class="font-body text-stone-300 text-sm leading-relaxed mb-6">
+                    Rasiklal M. Dhariwal Institute of Technology is dedicated to providing high-quality technical education that empowers students to achieve global standards of professional excellence.
+                </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="mailto:admissions@rmdit.edu.in">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="tel:+912135123456">
+<span class="material-symbols-outlined text-sm">phone_in_talk</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="index.html">Home</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Admission.html">Admissions</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Programmes</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Placement.html">Placements</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Faculty.html">Faculty</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Departments</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Computer Technology</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Mechanical Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Civil Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electronics &amp; Telecomm</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electrical Engineering</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Campus Location</h5>
+<p class="font-body text-stone-300 text-sm mb-6">
+                    Akurdi, Near Railway Station,<br/>
+                    Sector No. 27-A, Pradhikaran,<br/>
+                    Pune, Maharashtra 411044
+                </p>
+<div class="h-40 bg-stone-800 rounded-sm overflow-hidden grayscale">
+<img class="w-full h-full object-cover opacity-50" data-alt="A stylized digital map view showing the city of Pune, India, with a prominent pin marking the location of the RMDIT campus. The map uses a sophisticated dark-mode aesthetic with golden lines and markers, aligning with the premium institutional brand. The visualization is clean, professional, and emphasizes the strategic location of the institute." data-location="Pune, India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGNFSUJXY3Pr-4gYFepv09isUFA7jOdC-klGHziPjfLPuHDAKGDEWMLHGvcOdnpOTGJR_eUCdakfP4mvw5bVtD_dWS2UPb2iqicYhNFzIIsUAoNTP4KsHNds5ByPWwAuqvO5A1MiV1N_15aL8NTloJ_sMoOTfMyccaT2oZj9wgTMIRw2LXjE8SnbRFWE1ioVqCK202CPLyLM03jPXWMe_1pqyrBDM2Ak0bphUZiplzo5V5XrK6wKxgAjI_zoE3DzxQQ6p7E5kpmgc"/>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8">
+<div class="max-w-[1280px] mx-auto px-12 text-center text-stone-400 text-[11px] font-body tracking-widest uppercase">
+                © 2024 Rasiklal M. Dhariwal Institute of Technology. Institutional Excellence Since Inception.
+            </div>
+</div>
+</footer>
+</body></html>

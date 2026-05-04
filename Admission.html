@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admissions | RMDIT Polytechnic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&amp;family=DM+Sans:wght@400;500;700&amp;family=Cormorant+Garamond:ital,wght@0,400;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "silver-light": "#E8ECF0",
+                      "on-primary-fixed-variant": "#84232a",
+                      "text-dark": "#1A0305",
+                      "surface-bright": "#f9f9f7",
+                      "primary-fixed": "#ffdad9",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#eeeeec",
+                      "silver-bright": "#F5F6F8",
+                      "surface-variant": "#e2e3e1",
+                      "on-secondary-container": "#785d00",
+                      "maroon-light": "#A52535",
+                      "on-surface": "#1a1c1b",
+                      "tertiary-fixed-dim": "#bfc7d3",
+                      "primary-fixed-dim": "#ffb3b2",
+                      "maroon-mid": "#8B1A2A",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#e6c364",
+                      "surface-container-low": "#f4f4f2",
+                      "border-subtle": "rgba(192, 200, 212, 0.35)",
+                      "outline": "#8a7171",
+                      "background": "#f9f9f7",
+                      "tertiary-container": "#2e363f",
+                      "on-background": "#1a1c1b",
+                      "secondary-fixed": "#ffe08f",
+                      "tertiary": "#19212a",
+                      "maroon-deep": "#3D0408",
+                      "on-tertiary-fixed": "#141c25",
+                      "on-tertiary-fixed-variant": "#3f4751",
+                      "inverse-on-surface": "#f1f1ef",
+                      "footer-bg": "#1A0003",
+                      "secondary": "#755b00",
+                      "on-error-container": "#93000a",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#dbe3ef",
+                      "primary-container": "#6b0f1a",
+                      "surface-tint": "#a43a3f",
+                      "surface-container-high": "#e8e8e6",
+                      "primary": "#49000a",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#fed977",
+                      "on-tertiary-container": "#979faa",
+                      "surface-container-highest": "#e2e3e1",
+                      "on-surface-variant": "#564241",
+                      "on-secondary-fixed-variant": "#584400",
+                      "on-secondary-fixed": "#241a00",
+                      "surface": "#f9f9f7",
+                      "outline-variant": "#ddc0bf",
+                      "on-primary-container": "#f4777a",
+                      "on-primary-fixed": "#410008",
+                      "text-body": "#444444",
+                      "surface-dim": "#dadad8",
+                      "inverse-primary": "#ffb3b2",
+                      "inverse-surface": "#2f3130",
+                      "gold-light": "#E2C46A"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-padding-v": "90px",
+                      "grid-gap-lg": "80px",
+                      "section-padding-h": "32px",
+                      "card-padding": "28px",
+                      "grid-gap-md": "32px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "nav-link": ["DM Sans"],
+                      "tagline-italic": ["Cormorant Garamond"],
+                      "h1": ["Playfair Display"],
+                      "h2": ["Playfair Display"],
+                      "eyebrow": ["DM Sans"],
+                      "decorative-numeral": ["Cormorant Garamond"],
+                      "stat-number": ["Playfair Display"],
+                      "body": ["DM Sans"],
+                      "h3": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "nav-link": ["13.5px", {"letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "tagline-italic": ["20px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "h1": ["58px", {"lineHeight": "1.07", "fontWeight": "900"}],
+                      "h2": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "eyebrow": ["11px", {"letterSpacing": "0.15em", "fontWeight": "700"}],
+                      "decorative-numeral": ["48px", {"fontWeight": "400"}],
+                      "stat-number": ["44px", {"lineHeight": "1", "fontWeight": "700"}],
+                      "body": ["15px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .maroon-gradient {
+            background: linear-gradient(135deg, #6B0F1A 0%, #3D0408 100%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #E2C46A 0%, #B89643 100%);
+        }
+        .radial-glow {
+            background: radial-gradient(circle at top right, rgba(226, 196, 106, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(107, 15, 26, 0.1), transparent 40%);
+        }
+      </style>
+</head>
+<body class="bg-background font-body text-text-body overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 border-b-[3px] border-[#6B0F1A] bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto">
+<a class="text-lg font-black font-['Playfair_Display'] text-[#6B0F1A] dark:text-amber-500 uppercase tracking-tighter" href="index.html">
+                RMDIT Polytechnic
+            </a>
+<nav class="hidden lg:flex items-center space-x-8 font-['Playfair_Display'] text-sm tracking-wide uppercase font-semibold">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="index.html">Home</a>
+<a class="text-[#6B0F1A] dark:text-amber-500 font-bold border-b-2 border-[#6B0F1A] pb-1" href="Admission.html">Admissions</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Programmes.html">Programmes</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Faculty.html">Faculty</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Placement.html">Placements</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-maroon-mid">search</button>
+<a class="bg-[#6B0F1A] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-maroon-deep transition-all duration-300 active:scale-95 shadow-lg" href="Admission.html">
+                    Apply Now
+                </a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A grand, architectural shot of a modern university campus building with clean lines and glass facades, bathed in the golden light of a setting sun. The atmosphere is prestigious and academic, featuring manicured lawns and stone pathways that lead toward the entrance. The lighting is dramatic and warm, emphasizing the institutional excellence and modern educational environment of the polytechnic institute." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0AWXPO4EJhs1b4dkWli0hrQpwGIXJxmEWOFei5klzV62c2TpFkJd30gtQ17sFMqsQ0LZ8M-xNoh3hIp1KPKHZM0HQagrz6t0Lv8CJdysZO0lQAKKTYm3sjAoS7G3M1qxl9UsWieTpL7n11tGx1QJWG9-od4hAC8JHZ2X3ZEe05uJUqWSJNiLe9ME6YyMHCkqSQRZh4d1getEkHWF35xoXXuy8HOAccvqcbK8o14aMYexJiTF5vEj8w1WjeeyGDnRGWfjFQk8RRiQ"/>
+<div class="absolute inset-0 bg-maroon-deep/60 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-maroon-deep via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="container max-w-[1280px] mx-auto px-8 relative z-10">
+<div class="max-w-2xl">
+<span class="font-eyebrow text-eyebrow text-gold-light uppercase mb-4 block">Admission 2024-25</span>
+<h1 class="font-h1 text-h1 text-white mb-6">Secure Your Future In Engineering Excellence.</h1>
+<p class="font-tagline-italic text-tagline-italic text-silver-bright mb-10 italic">Join a legacy of technical innovation and professional mastery at Rasiklal M. Dhariwal Institute of Technology.</p>
+<div class="flex gap-4">
+<button class="gold-gradient text-maroon-deep px-8 py-4 font-bold rounded-sm shadow-lg hover:translate-y-[-4px] transition-transform">
+                        Start Application
+                    </button>
+<button class="border border-white/30 bg-white/10 backdrop-blur-sm text-white px-8 py-4 font-bold rounded-sm hover:bg-white/20 transition-all">
+                        Download Brochure
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Announcement Marquee -->
+<div class="bg-maroon-mid text-white py-3 border-y border-gold-light/20 overflow-hidden whitespace-nowrap">
+<div class="flex items-center gap-12 animate-marquee">
+<span class="font-eyebrow flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">stars</span> DTE REGISTRATION OPEN FOR ACADEMIC YEAR 2024-25</span>
+<span class="text-gold-light">◆</span>
+<span class="font-eyebrow flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">event</span> LAST DATE FOR OPTION ENTRY: AUGUST 15TH</span>
+<span class="text-gold-light">◆</span>
+<span class="font-eyebrow flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">school</span> NEW BATCH COMMENCING SEPTEMBER 1ST</span>
+<span class="text-gold-light">◆</span>
+<span class="font-eyebrow flex items-center gap-2"><span class="material-symbols-outlined text-[14px]">stars</span> 100% PLACEMENT ASSISTANCE FOR ALL PROGRAMMES</span>
+</div>
+</div>
+<!-- Admission Process: Vertical Timeline -->
+<section class="py-section-padding-v px-section-padding-h max-w-[1280px] mx-auto radial-glow">
+<div class="text-center mb-16">
+<span class="font-eyebrow text-eyebrow text-maroon-mid uppercase">The Roadmap</span>
+<h2 class="font-h2 text-h2 text-text-dark mt-2">Admission Journey</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gap-lg items-center">
+<div class="space-y-12 relative">
+<!-- Vertical Line -->
+<div class="absolute left-[24px] top-4 bottom-4 w-[2px] bg-silver-light"></div>
+<!-- Step 1 -->
+<div class="flex gap-8 relative group">
+<div class="z-10 w-12 h-12 rounded-full bg-white border-4 border-maroon-mid flex items-center justify-center text-maroon-mid font-bold group-hover:bg-maroon-mid group-hover:text-white transition-colors duration-300">1</div>
+<div class="flex-1">
+<h3 class="font-h3 text-h3 text-maroon-deep mb-2">Eligibility Check</h3>
+<p class="font-body text-body text-on-surface-variant">Verify minimum 35% aggregate in 10th Standard (SSC) with Science and Mathematics. Document verification starts at local facilitation centers.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-8 relative group">
+<div class="z-10 w-12 h-12 rounded-full bg-white border-4 border-maroon-mid flex items-center justify-center text-maroon-mid font-bold group-hover:bg-maroon-mid group-hover:text-white transition-colors duration-300">2</div>
+<div class="flex-1">
+<h3 class="font-h3 text-h3 text-maroon-deep mb-2">DTE Registration</h3>
+<p class="font-body text-body text-on-surface-variant">Register on the DTE Maharashtra portal and obtain your Application ID. Upload necessary documents for e-Scrutiny or Physical Scrutiny.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-8 relative group">
+<div class="z-10 w-12 h-12 rounded-full bg-white border-4 border-maroon-mid flex items-center justify-center text-maroon-mid font-bold group-hover:bg-maroon-mid group-hover:text-white transition-colors duration-300">3</div>
+<div class="flex-1">
+<h3 class="font-h3 text-h3 text-maroon-deep mb-2">Option Entry</h3>
+<p class="font-body text-body text-on-surface-variant">Fill out your preference of courses and colleges in the CAP rounds. Ensure RMDIT (Code: 6415) is your first choice for priority allocation.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-8 relative group">
+<div class="z-10 w-12 h-12 rounded-full bg-white border-4 border-maroon-mid flex items-center justify-center text-maroon-mid font-bold group-hover:bg-maroon-mid group-hover:text-white transition-colors duration-300">4</div>
+<div class="flex-1">
+<h3 class="font-h3 text-h3 text-maroon-deep mb-2">Final Admission</h3>
+<p class="font-body text-body text-on-surface-variant">Reporting to the institute after seat allotment. Fee payment and original document submission to finalize your enrollment.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 border-2 border-gold-light/30 rounded-xl"></div>
+<img class="w-full h-[600px] object-cover rounded-lg shadow-2xl relative z-10" data-alt="A group of diverse engineering students collaborating on a technical project in a bright, modern laboratory setting. The room is filled with high-tech equipment, blueprints, and digital displays. The lighting is professional and clear, capturing a sense of focused innovation and teamwork. The students wear smart-casual academic attire, embodying the prestige and active learning environment of RMDIT Polytechnic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASi8PFuWgZXnuuhG4we8A0ZrF37Ts93RjfXlwtq-x1STs-iGQ1D1frcRCQKbuDbDBfqMhx3I5Tyv_sgJelayBZRvne-CuAfeLJRp9IuVCd8jWnB_UEf5IpfPfCqz7wBwzR58s1UeaDFudrz9IMr1RXmX3cZpUNRWDcGEqeoADxe1jJbpZycXeWUVFFRma9YZWTdY1rL8moSHj51p_dvk4dK6njsTIs4UTYpat7oMyAQUbULSIaL15NnWIlloBSqNTqZYbf7oswG5w"/>
+</div>
+</div>
+</section>
+<!-- Important Dates & Fees: Bento Grid Layout -->
+<section class="py-section-padding-v bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-section-padding-h">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-grid-gap-md">
+<!-- Important Dates Table -->
+<div class="lg:col-span-2 bg-white p-card-padding rounded-xl shadow-sm border-t-4 border-maroon-mid">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-h3 text-h3 text-maroon-deep">Academic Deadlines</h3>
+<span class="material-symbols-outlined text-gold-light">calendar_month</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="border-b border-silver-light">
+<tr>
+<th class="py-4 font-eyebrow text-maroon-mid uppercase">Event Description</th>
+<th class="py-4 font-eyebrow text-maroon-mid uppercase">Start Date</th>
+<th class="py-4 font-eyebrow text-maroon-mid uppercase">End Date</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-silver-light">
+<tr>
+<td class="py-4 font-nav-link text-text-dark">Online Registration (CAP)</td>
+<td class="py-4 text-on-surface-variant">June 15, 2024</td>
+<td class="py-4 text-on-surface-variant">July 10, 2024</td>
+</tr>
+<tr>
+<td class="py-4 font-nav-link text-text-dark">Document Verification</td>
+<td class="py-4 text-on-surface-variant">June 16, 2024</td>
+<td class="py-4 text-on-surface-variant">July 12, 2024</td>
+</tr>
+<tr>
+<td class="py-4 font-nav-link text-text-dark">Provisional Merit List</td>
+<td class="py-4 text-center font-bold text-maroon-mid" colspan="2">July 15, 2024</td>
+</tr>
+<tr>
+<td class="py-4 font-nav-link text-text-dark">CAP Round 1 Options</td>
+<td class="py-4 text-on-surface-variant">July 20, 2024</td>
+<td class="py-4 text-on-surface-variant">July 25, 2024</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Fee Structure Summary -->
+<div class="bg-maroon-deep p-card-padding rounded-xl text-white shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+<span class="font-decorative-numeral text-[180px] leading-none">$</span>
+</div>
+<h3 class="font-h3 text-h3 text-gold-light mb-8 relative z-10">Fee Structure</h3>
+<div class="space-y-6 relative z-10">
+<div class="flex justify-between items-end border-b border-white/10 pb-4">
+<div>
+<p class="font-eyebrow opacity-60">Open Category</p>
+<p class="font-nav-link text-lg">Full Tuition</p>
+</div>
+<span class="font-stat-number text-gold-light">₹68k</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/10 pb-4">
+<div>
+<p class="font-eyebrow opacity-60">OBC / EBC / SEBC</p>
+<p class="font-nav-link text-lg">50% Scholarship</p>
+</div>
+<span class="font-stat-number text-gold-light">₹34k</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/10 pb-4">
+<div>
+<p class="font-eyebrow opacity-60">SC / ST / VJNT / SBC</p>
+<p class="font-nav-link text-lg">Government Funded</p>
+</div>
+<span class="font-stat-number text-gold-light">₹6k</span>
+</div>
+<div class="pt-4">
+<p class="text-xs opacity-50 italic">* Fees subject to MSBTE and Shikshan Shulka Samiti regulation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Required Documents Section -->
+<section class="py-section-padding-v max-w-[1280px] mx-auto px-section-padding-h">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="md:w-1/3">
+<div class="sticky top-32">
+<div class="w-12 h-1 bg-gold-light mb-6"></div>
+<h2 class="font-h2 text-h2 text-maroon-deep mb-6">Required Documentation</h2>
+<p class="font-body text-body text-on-surface-variant">Ensure you have scanned copies (PDF, &lt; 1MB) of the following documents before starting the online registration process.</p>
+<div class="mt-8 flex items-center gap-4 text-maroon-mid font-bold">
+<span class="material-symbols-outlined">download</span>
+<a class="underline hover:text-maroon-light" href="#">Download Checklist PDF</a>
+</div>
+</div>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<!-- General -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-silver-light hover:shadow-md transition-shadow">
+<h4 class="font-h3 text-xl text-maroon-mid mb-4">General Category</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> 10th / SSC Marksheet</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> School Leaving Certificate</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Domicile Certificate</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Aadhaar Card</li>
+</ul>
+</div>
+<!-- Category -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-silver-light hover:shadow-md transition-shadow">
+<h4 class="font-h3 text-xl text-maroon-mid mb-4">Reserved Category</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Caste Certificate</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Caste Validity</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Non-Creamy Layer (NCL)</li>
+</ul>
+</div>
+<!-- Financial -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-silver-light hover:shadow-md transition-shadow">
+<h4 class="font-h3 text-xl text-maroon-mid mb-4">Scholarship / Income</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Annual Income Certificate</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> EWS Certificate (If applicable)</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Ration Card</li>
+</ul>
+</div>
+<!-- Others -->
+<div class="bg-white p-8 rounded-lg shadow-sm border border-silver-light hover:shadow-md transition-shadow">
+<h4 class="font-h3 text-xl text-maroon-mid mb-4">Others</h4>
+<ul class="space-y-3">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Migration (Outside MSBTE)</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Gap Certificate (If any)</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-gold-light text-sm mt-1">check_circle</span> Proforma O/P (Def / PH)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Inquiry Form Section -->
+<section class="py-section-padding-v bg-[#6B0F1A] text-white">
+<div class="max-w-[1280px] mx-auto px-section-padding-h grid grid-cols-1 md:grid-cols-2 gap-grid-gap-lg items-center">
+<div>
+<span class="font-eyebrow text-gold-light uppercase mb-4 block">Get In Touch</span>
+<h2 class="font-h2 text-h2 mb-6">Still Have Questions?</h2>
+<p class="font-body text-silver-bright mb-8">Our admission counselors are available Monday to Saturday (10:00 AM - 5:00 PM) to guide you through the technical education path that fits your career goals.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-light">call</span>
+</div>
+<div>
+<p class="font-eyebrow opacity-60">Admission Helpline</p>
+<p class="font-h3 text-lg">+91 (02133) 223 904</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-gold-light">mail</span>
+</div>
+<div>
+<p class="font-eyebrow opacity-60">General Inquiries</p>
+<p class="font-h3 text-lg">admissions@rmdit.edu.in</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-card-padding rounded-xl text-text-dark shadow-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-eyebrow text-maroon-mid block">Student Name</label>
+<input class="w-full border-silver-light focus:ring-maroon-mid focus:border-maroon-mid rounded-sm px-4 py-3" placeholder="Full Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-eyebrow text-maroon-mid block">Mobile Number</label>
+<input class="w-full border-silver-light focus:ring-maroon-mid focus:border-maroon-mid rounded-sm px-4 py-3" placeholder="+91-0000000000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-eyebrow text-maroon-mid block">Email Address</label>
+<input class="w-full border-silver-light focus:ring-maroon-mid focus:border-maroon-mid rounded-sm px-4 py-3" placeholder="email@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-eyebrow text-maroon-mid block">Interested Department</label>
+<select class="w-full border-silver-light focus:ring-maroon-mid focus:border-maroon-mid rounded-sm px-4 py-3">
+<option>Computer Engineering</option>
+<option>Information Technology</option>
+<option>Mechanical Engineering</option>
+<option>Civil Engineering</option>
+<option>Electronics &amp; Telecommunication</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-eyebrow text-maroon-mid block">Your Inquiry</label>
+<textarea class="w-full border-silver-light focus:ring-maroon-mid focus:border-maroon-mid rounded-sm px-4 py-3" placeholder="Ask us anything about admissions..." rows="4"></textarea>
+</div>
+<button class="w-full maroon-gradient text-white font-bold py-4 rounded-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        Send Inquiry <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#6B0F1A] dark:bg-stone-900 border-t-4 border-amber-500 w-full font-['Playfair_Display'] text-stone-200">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 py-20 px-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-bold text-amber-500 mb-6">RMDIT</div>
+<p class="font-body text-stone-300 text-sm leading-relaxed mb-6">
+                    Rasiklal M. Dhariwal Institute of Technology is dedicated to providing high-quality technical education that empowers students to achieve global standards of professional excellence.
+                </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="mailto:admissions@rmdit.edu.in">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="tel:+912135123456">
+<span class="material-symbols-outlined text-sm">phone_in_talk</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="index.html">Home</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Admission.html">Admissions</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Programmes</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Placement.html">Placements</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Faculty.html">Faculty</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Departments</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Computer Technology</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Mechanical Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Civil Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electronics &amp; Telecomm</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electrical Engineering</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Campus Location</h5>
+<p class="font-body text-stone-300 text-sm mb-6">
+                    Akurdi, Near Railway Station,<br/>
+                    Sector No. 27-A, Pradhikaran,<br/>
+                    Pune, Maharashtra 411044
+                </p>
+<div class="h-40 bg-stone-800 rounded-sm overflow-hidden grayscale">
+<img class="w-full h-full object-cover opacity-50" data-alt="A stylized digital map view showing the city of Pune, India, with a prominent pin marking the location of the RMDIT campus. The map uses a sophisticated dark-mode aesthetic with golden lines and markers, aligning with the premium institutional brand. The visualization is clean, professional, and emphasizes the strategic location of the institute." data-location="Pune, India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGNFSUJXY3Pr-4gYFepv09isUFA7jOdC-klGHziPjfLPuHDAKGDEWMLHGvcOdnpOTGJR_eUCdakfP4mvw5bVtD_dWS2UPb2iqicYhNFzIIsUAoNTP4KsHNds5ByPWwAuqvO5A1MiV1N_15aL8NTloJ_sMoOTfMyccaT2oZj9wgTMIRw2LXjE8SnbRFWE1ioVqCK202CPLyLM03jPXWMe_1pqyrBDM2Ak0bphUZiplzo5V5XrK6wKxgAjI_zoE3DzxQQ6p7E5kpmgc"/>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8">
+<div class="max-w-[1280px] mx-auto px-12 text-center text-stone-400 text-[11px] font-body tracking-widest uppercase">
+                © 2024 Rasiklal M. Dhariwal Institute of Technology. Institutional Excellence Since Inception.
+            </div>
+</div>
+</footer>
+</body></html>

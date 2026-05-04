@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&amp;family=DM+Sans:wght@400;500;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cinematic-glow {
+            background: radial-gradient(circle at top right, rgba(226, 196, 106, 0.08), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(107, 15, 26, 0.05), transparent 40%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "silver-light": "#E8ECF0",
+                        "on-primary-fixed-variant": "#84232a",
+                        "text-dark": "#1A0305",
+                        "surface-bright": "#f9f9f7",
+                        "primary-fixed": "#ffdad9",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeeec",
+                        "silver-bright": "#F5F6F8",
+                        "surface-variant": "#e2e3e1",
+                        "on-secondary-container": "#785d00",
+                        "maroon-light": "#A52535",
+                        "on-surface": "#1a1c1b",
+                        "tertiary-fixed-dim": "#bfc7d3",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "maroon-mid": "#8B1A2A",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#e6c364",
+                        "surface-container-low": "#f4f4f2",
+                        "border-subtle": "rgba(192, 200, 212, 0.35)",
+                        "outline": "#8a7171",
+                        "background": "#f9f9f7",
+                        "tertiary-container": "#2e363f",
+                        "on-background": "#1a1c1b",
+                        "secondary-fixed": "#ffe08f",
+                        "tertiary": "#19212a",
+                        "maroon-deep": "#3D0408",
+                        "on-tertiary-fixed": "#141c25",
+                        "on-tertiary-fixed-variant": "#3f4751",
+                        "inverse-on-surface": "#f1f1ef",
+                        "footer-bg": "#1A0003",
+                        "secondary": "#755b00",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#dbe3ef",
+                        "primary-container": "#6b0f1a",
+                        "surface-tint": "#a43a3f",
+                        "surface-container-high": "#e8e8e6",
+                        "primary": "#49000a",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#fed977",
+                        "on-tertiary-container": "#979faa",
+                        "surface-container-highest": "#e2e3e1",
+                        "on-surface-variant": "#564241",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-secondary-fixed": "#241a00",
+                        "surface": "#f9f9f7",
+                        "outline-variant": "#ddc0bf",
+                        "on-primary-container": "#f4777a",
+                        "on-primary-fixed": "#410008",
+                        "text-body": "#444444",
+                        "surface-dim": "#dadad8",
+                        "inverse-primary": "#ffb3b2",
+                        "inverse-surface": "#2f3130",
+                        "gold-light": "#E2C46A"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding-v": "90px",
+                        "grid-gap-lg": "80px",
+                        "section-padding-h": "32px",
+                        "card-padding": "28px",
+                        "grid-gap-md": "32px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "nav-link": ["DM Sans"],
+                        "tagline-italic": ["Cormorant Garamond"],
+                        "h1": ["Playfair Display"],
+                        "h2": ["Playfair Display"],
+                        "eyebrow": ["DM Sans"],
+                        "decorative-numeral": ["Cormorant Garamond"],
+                        "stat-number": ["Playfair Display"],
+                        "body": ["DM Sans"],
+                        "h3": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "nav-link": ["13.5px", {"letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "tagline-italic": ["20px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "h1": ["58px", {"lineHeight": "1.07", "fontWeight": "900"}],
+                        "h2": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "eyebrow": ["11px", {"letterSpacing": "0.15em", "fontWeight": "700"}],
+                        "decorative-numeral": ["48px", {"fontWeight": "400"}],
+                        "stat-number": ["44px", {"lineHeight": "1", "fontWeight": "700"}],
+                        "body": ["15px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-maroon-mid selection:text-white">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 border-b-[3px] border-[#6B0F1A] bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto">
+<a class="text-lg font-black font-['Playfair_Display'] text-[#6B0F1A] dark:text-amber-500 uppercase tracking-tighter" href="index.html">
+                RMDIT Polytechnic
+            </a>
+<nav class="hidden lg:flex items-center space-x-8 font-['Playfair_Display'] text-sm tracking-wide uppercase font-semibold">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="index.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Admission.html">Admissions</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Programmes.html">Programmes</a>
+<a class="text-[#6B0F1A] dark:text-amber-500 font-bold border-b-2 border-[#6B0F1A] pb-1" href="Faculty.html">Faculty</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Placement.html">Placements</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-maroon-mid">search</button>
+<a class="bg-[#6B0F1A] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-maroon-deep transition-all duration-300 active:scale-95 shadow-lg" href="Admission.html">
+                    Apply Now
+                </a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative bg-maroon-deep py-24 overflow-hidden">
+<div class="absolute inset-0 cinematic-glow opacity-30"></div>
+<div class="max-w-[1280px] mx-auto px-8 relative z-10 flex flex-col items-center text-center">
+<span class="font-eyebrow text-eyebrow text-gold-light uppercase tracking-[0.3em] mb-6 block">Academic Leadership</span>
+<h1 class="font-h1 text-h1 text-white mb-8">Our Distinguished Faculty</h1>
+<p class="font-tagline-italic text-tagline-italic text-silver-light max-w-2xl italic">
+                Guided by excellence, our faculty members are industry veterans and scholarly experts dedicated to shaping the next generation of technological innovators.
+            </p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-light/40 to-transparent"></div>
+</section>
+<!-- Dean's Message -->
+<section class="py-[90px] px-8 max-w-[1280px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-grid-gap-lg items-center">
+<div class="relative group">
+<div class="absolute -inset-4 border border-gold-light/20 -z-10 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-6 group-hover:translate-y-6"></div>
+<img alt="Dean of RMDIT Polytechnic" class="w-full h-[600px] object-cover shadow-2xl" data-alt="A professional portrait of a senior academic dean in a formal navy blue suit. He is standing in a library with dark mahogany shelves filled with leather-bound books. The lighting is warm and cinematic, emphasizing authority and wisdom. The overall tone is prestigious and institutional, aligning with the RMDIT brand colors of deep maroon and gold." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG-Xweqp6M4v3sWAvNrRy2KMkBYZ7zQEStrTt_yl6TXQs034Xr6xciaKsex9I4LKH8EGCtlyiO5iu-kr78bWJ8w1Qy6KtETsZGo4vIR-V1wJ_MF2rpZKo_3KfIV3bRoO-VGfZcv_fsVhXlAUXakuacYY5q_sFL6yKbzUxqOunJuhmR2vXuRjPlK6GiVcNMX5X23969vusfoBAhFz2QqLw4tJZfh4mx9sd50RD-1BCG0N-r1CfqoJ7I0YXQCkwFx58P02BTx4oMAYQ"/>
+<div class="absolute bottom-0 right-0 bg-maroon-mid p-8 text-white max-w-xs">
+<h3 class="font-h3 text-h3 mb-1 text-gold-light">Dr. Arvind K. Mehta</h3>
+<p class="font-eyebrow text-[10px] tracking-widest uppercase">Dean of Academic Affairs</p>
+</div>
+</div>
+<div class="space-y-8">
+<span class="w-9 h-[3px] bg-gold-light block"></span>
+<h2 class="font-h2 text-h2 text-maroon-deep">Message from the Dean</h2>
+<div class="font-body text-body space-y-6 text-on-surface-variant">
+<p>At RMDIT Polytechnic, we believe that the caliber of an institution is defined by the brilliance of its faculty. Our professors are not merely instructors but mentors who bridge the gap between theoretical rigor and industrial application.</p>
+<p>We take pride in our diverse body of educators who bring decades of collective research and field expertise. It is through their unwavering commitment that we continue to maintain our legacy of institutional excellence and technical mastery.</p>
+<p class="italic font-tagline-italic text-maroon-mid">"Engineering the future requires a foundation built on intellectual integrity and relentless curiosity."</p>
+</div>
+<button class="font-eyebrow text-eyebrow text-maroon-mid flex items-center gap-2 group">
+                    VIEW ACADEMIC PORTFOLIO 
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Faculty Directory -->
+<section class="py-[90px] bg-silver-bright">
+<div class="max-w-[1280px] mx-auto px-8">
+<!-- Dept: Computer Engineering -->
+<div class="mb-16">
+<div class="flex items-end justify-between mb-12 border-b border-stone-200 pb-4">
+<h2 class="font-h2 text-h2 text-maroon-deep">Computer Engineering</h2>
+<span class="font-eyebrow text-eyebrow text-stone-400 mb-2">04 MEMBERS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gap-md">
+<!-- Faculty Card 1 -->
+<div class="bg-white p-6 shadow-[rgba(61,4,8,0.08)_0px_8px_24px] border-t-4 border-maroon-mid group hover:-translate-y-2 transition-all duration-300">
+<div class="relative overflow-hidden mb-6 h-64">
+<img alt="Prof. Sarah Jenkins" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional headshot of a female professor in a modern office setting. She is wearing a professional charcoal blazer. The background is softly blurred, showing a high-tech laboratory environment. The lighting is crisp and professional, using a corporate editorial style with soft maroon highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLig6uHWuuL49a_WSsIDg6fAcy22cHxs5E5qPytfhw61cN_tCAdnuwMvYqor4gxBWwCDNTNaFujB14oqNErFvJ2q7_jFTB-pH_cIVECEuYbSWWG_U34UUYekQ7y7TKXI5w0kHq8LiQwgsQ2k8rK_AVNuzg3OpA5AjJKtwdP1IGl6y0cPv0vnnTLQxGrIuuYFXRFqUrFgWt4OGwYbGWo9eEXbSreESDAjQOEryGugdN-eW21qdC6hJ1jH6te9973Av6S9YlRj39wSQ"/>
+</div>
+<h3 class="font-h3 text-h3 text-maroon-deep mb-2">Prof. Sarah Jenkins</h3>
+<div class="space-y-4">
+<p class="font-eyebrow text-eyebrow text-secondary uppercase tracking-wider">HOD &amp; Senior Professor</p>
+<p class="font-body text-sm text-stone-500 italic">Ph.D. in Artificial Intelligence, Stanford</p>
+<div class="pt-4 border-t border-stone-100">
+<p class="font-eyebrow text-[9px] text-stone-400 uppercase mb-2">Research Interests</p>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">Neural Networks, Natural Language Processing, Ethical AI systems.</p>
+</div>
+</div>
+</div>
+<!-- Faculty Card 2 -->
+<div class="bg-white p-6 shadow-[rgba(61,4,8,0.08)_0px_8px_24px] border-t-4 border-maroon-mid group hover:-translate-y-2 transition-all duration-300">
+<div class="relative overflow-hidden mb-6 h-64">
+<img alt="Dr. Robert Chen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A male engineering professor with glasses, dressed in a formal light blue shirt. He is posing in front of a white wall with a geometric shadow pattern. The aesthetic is clean, academic, and modern, following the premium institutional style with subtle gold accents in the lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmbAKo4BGItFBvwwsIW1uoOoqc2PqKviLk3lpJjyRli0ZaxI1uZBYyKasgopN3BRVjZRclEowSJxB4Q31uGZZJY5kL_5KCH0t2-OoJevgfl5pign0H3-6GnPemePNCQAzihihBi9g1bPXYXrEa4doWSXVeSggUrnHaWhdqO0ee9A02mrNhv9wwBkYoegT3dzuYohbwYUZXajxraZh7E7NAeZh-V_X1mc652p-mmTqPFyXpI2mKMlrB3-YWgshhsi5IypkQMXAlzgU"/>
+</div>
+<h3 class="font-h3 text-h3 text-maroon-deep mb-2">Dr. Robert Chen</h3>
+<div class="space-y-4">
+<p class="font-eyebrow text-eyebrow text-secondary uppercase tracking-wider">Associate Professor</p>
+<p class="font-body text-sm text-stone-500 italic">M.Tech, Ph.D. in Cyber Security</p>
+<div class="pt-4 border-t border-stone-100">
+<p class="font-eyebrow text-[9px] text-stone-400 uppercase mb-2">Research Interests</p>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">Blockchain Protocols, Network Forensics, Quantum Cryptography.</p>
+</div>
+</div>
+</div>
+<!-- Faculty Card 3 -->
+<div class="bg-white p-6 shadow-[rgba(61,4,8,0.08)_0px_8px_24px] border-t-4 border-maroon-mid group hover:-translate-y-2 transition-all duration-300">
+<div class="relative overflow-hidden mb-6 h-64">
+<img alt="Ms. Anita Deshmukh" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A female professor in a traditional but professional academic setting. She is wearing a maroon ethnic-modern fusion outfit. The background is a clean white studio with a faint gold radial glow. The style is high-end corporate editorial, representing academic rigor and prestige." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwAMvTIYUK1SdXhtwNFuT8Br5dCUIIZbAHrc7rUEpQHAMJAabpy_OIMBU_SMiERgk_Ei3nDGNrZOuk4IqJYD3EI9DVjwoUQpgW0sKKSKbcqtQIXEwz0tWIT-zU2OSDR5PWH0eY2panGHexPza0vlniweIr6t06asLNkdJ_VNzr7eSt7eYfMdEKGTUlrq9BOEJ3alm-zHV0buacD5AaDKzL1M5BVPksxNFeg-TrrL3pC2auIQ0fLIqlO9sHHYDw652MwzqifTzZl08"/>
+</div>
+<h3 class="font-h3 text-h3 text-maroon-deep mb-2">Ms. Anita Deshmukh</h3>
+<div class="space-y-4">
+<p class="font-eyebrow text-eyebrow text-secondary uppercase tracking-wider">Assistant Professor</p>
+<p class="font-body text-sm text-stone-500 italic">M.E. in Cloud Computing</p>
+<div class="pt-4 border-t border-stone-100">
+<p class="font-eyebrow text-[9px] text-stone-400 uppercase mb-2">Research Interests</p>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">Edge Computing, Distributed Systems, Serverless Architectures.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Dept: Mechanical Engineering -->
+<div>
+<div class="flex items-end justify-between mb-12 border-b border-stone-200 pb-4">
+<h2 class="font-h2 text-h2 text-maroon-deep">Mechanical Engineering</h2>
+<span class="font-eyebrow text-eyebrow text-stone-400 mb-2">02 MEMBERS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-grid-gap-md">
+<!-- Faculty Card 4 -->
+<div class="bg-white p-6 shadow-[rgba(61,4,8,0.08)_0px_8px_24px] border-t-4 border-maroon-mid group hover:-translate-y-2 transition-all duration-300">
+<div class="relative overflow-hidden mb-6 h-64">
+<img alt="Dr. Vikram Singh" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A professional male academic in his 50s, wearing a gray blazer and glasses. He is standing in a workshop or industrial laboratory environment with blurred machinery in the background. The mood is focused and technical, with high-contrast lighting emphasizing the institutional maroon and white palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCypXNIheR8Qlyqg0mAxoM0Mi4O0Hh0uxQTY-hGmYDin5g87ACgWYjQhflmi5zpH--u5-wRFDVNdIlOA1ZtmTcHoUDAopZs-w2O7CXUn3Ri88AtRl3K3G3cn-01DYrm4k7oqzlRMsI9fd0iMmGKs1KyTWUhbjjhkpvXV3U3PdL4vdJ2lSRXkQvLJGp_oUrgGjK3XpgJwGaNP6vRtaTMyRxuqYtTDCXc8w3SYiy2ZxKUitFrMomRs5kNtGkpFXzr7aWU3GgP2uEekoU"/>
+</div>
+<h3 class="font-h3 text-h3 text-maroon-deep mb-2">Dr. Vikram Singh</h3>
+<div class="space-y-4">
+<p class="font-eyebrow text-eyebrow text-secondary uppercase tracking-wider">Professor &amp; Dean R&amp;D</p>
+<p class="font-body text-sm text-stone-500 italic">Ph.D. from IIT Bombay, Mechatronics</p>
+<div class="pt-4 border-t border-stone-100">
+<p class="font-eyebrow text-[9px] text-stone-400 uppercase mb-2">Research Interests</p>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">Robotics, Sustainable Manufacturing, Thermodynamics.</p>
+</div>
+</div>
+</div>
+<!-- Faculty Card 5 -->
+<div class="bg-white p-6 shadow-[rgba(61,4,8,0.08)_0px_8px_24px] border-t-4 border-maroon-mid group hover:-translate-y-2 transition-all duration-300">
+<div class="relative overflow-hidden mb-6 h-64">
+<img alt="Prof. David Miller" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A young professional male professor in a business casual outfit. He is standing in a brightly lit academic corridor. The aesthetic is modern and fluid, with soft shadows and a focus on corporate professionalism. The lighting uses warm gold tones to create a cinematic, high-end editorial look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiiTlvpExMo2g4h-yA9Cda4YLlokmqIFynpWZ7C_J6wtkjxb2owc7sR20i48GBig5YS--JfDBWcDtQkhILWRuY9ChjYe-V87vkyKXQTakfZ82dntXOlYCxy00fvwRUxubiOKUCbFXQmnxtMW4zbbc_uKIETs2ldNqvllQLohiZh4-BsHataLMGL0VncpUQA-nHuV7BSHz5XeLya95Wq1bZlJZc7iDAjXuE8gbrkuC5FbASizCD8Ey-w-YvIE4tEzW9t3X4zmFFRI0"/>
+</div>
+<h3 class="font-h3 text-h3 text-maroon-deep mb-2">Prof. David Miller</h3>
+<div class="space-y-4">
+<p class="font-eyebrow text-eyebrow text-secondary uppercase tracking-wider">Assistant Professor</p>
+<p class="font-body text-sm text-stone-500 italic">M.S. in Automotive Design</p>
+<div class="pt-4 border-t border-stone-100">
+<p class="font-eyebrow text-[9px] text-stone-400 uppercase mb-2">Research Interests</p>
+<p class="font-body text-xs text-on-surface-variant line-clamp-2">Fluid Dynamics, Aerodynamics, EV Battery Management.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marquee -->
+<div class="bg-maroon-mid py-4 overflow-hidden border-y border-gold-light/20">
+<div class="flex items-center whitespace-nowrap space-x-12 animate-marquee">
+<div class="flex items-center gap-4 text-white font-eyebrow text-[10px] tracking-widest uppercase">
+<span class="w-2 h-2 rotate-45 bg-gold-light"></span>
+                Admissions Open for Academic Year 2024-25
+            </div>
+<div class="flex items-center gap-4 text-white font-eyebrow text-[10px] tracking-widest uppercase">
+<span class="w-2 h-2 rotate-45 bg-gold-light"></span>
+                Faculty Recruitment: Apply by June 15th
+            </div>
+<div class="flex items-center gap-4 text-white font-eyebrow text-[10px] tracking-widest uppercase">
+<span class="w-2 h-2 rotate-45 bg-gold-light"></span>
+                International Research Conference - Aug 2024
+            </div>
+<!-- Repeat for seamless effect -->
+<div class="flex items-center gap-4 text-white font-eyebrow text-[10px] tracking-widest uppercase">
+<span class="w-2 h-2 rotate-45 bg-gold-light"></span>
+                Admissions Open for Academic Year 2024-25
+            </div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-[#6B0F1A] dark:bg-stone-900 border-t-4 border-amber-500 w-full font-['Playfair_Display'] text-stone-200">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 py-20 px-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-bold text-amber-500 mb-6">RMDIT</div>
+<p class="font-body text-stone-300 text-sm leading-relaxed mb-6">
+                    Rasiklal M. Dhariwal Institute of Technology is dedicated to providing high-quality technical education that empowers students to achieve global standards of professional excellence.
+                </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="mailto:admissions@rmdit.edu.in">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="tel:+912135123456">
+<span class="material-symbols-outlined text-sm">phone_in_talk</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="index.html">Home</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Admission.html">Admissions</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Programmes</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Placement.html">Placements</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Faculty.html">Faculty</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Departments</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Computer Technology</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Mechanical Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Civil Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electronics &amp; Telecomm</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electrical Engineering</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Campus Location</h5>
+<p class="font-body text-stone-300 text-sm mb-6">
+                    Akurdi, Near Railway Station,<br/>
+                    Sector No. 27-A, Pradhikaran,<br/>
+                    Pune, Maharashtra 411044
+                </p>
+<div class="h-40 bg-stone-800 rounded-sm overflow-hidden grayscale">
+<img class="w-full h-full object-cover opacity-50" data-alt="A stylized digital map view showing the city of Pune, India, with a prominent pin marking the location of the RMDIT campus. The map uses a sophisticated dark-mode aesthetic with golden lines and markers, aligning with the premium institutional brand. The visualization is clean, professional, and emphasizes the strategic location of the institute." data-location="Pune, India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGNFSUJXY3Pr-4gYFepv09isUFA7jOdC-klGHziPjfLPuHDAKGDEWMLHGvcOdnpOTGJR_eUCdakfP4mvw5bVtD_dWS2UPb2iqicYhNFzIIsUAoNTP4KsHNds5ByPWwAuqvO5A1MiV1N_15aL8NTloJ_sMoOTfMyccaT2oZj9wgTMIRw2LXjE8SnbRFWE1ioVqCK202CPLyLM03jPXWMe_1pqyrBDM2Ak0bphUZiplzo5V5XrK6wKxgAjI_zoE3DzxQQ6p7E5kpmgc"/>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8">
+<div class="max-w-[1280px] mx-auto px-12 text-center text-stone-400 text-[11px] font-body tracking-widest uppercase">
+                © 2024 Rasiklal M. Dhariwal Institute of Technology. Institutional Excellence Since Inception.
+            </div>
+</div>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+    </style>
+</body></html>

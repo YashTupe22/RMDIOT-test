@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RMDIT Polytechnic | Institutional Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&amp;family=DM+Sans:wght@400;500;700&amp;family=Cormorant+Garamond:ital,wght@0,400;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#f9f9f7",
+                      "silver-light": "#E8ECF0",
+                      "on-tertiary-fixed-variant": "#3f4751",
+                      "on-background": "#1a1c1b",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#8a7171",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#a43a3f",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#ffb3b2",
+                      "maroon-light": "#A52535",
+                      "tertiary": "#19212a",
+                      "on-secondary-fixed-variant": "#584400",
+                      "surface-container-low": "#f4f4f2",
+                      "surface": "#f9f9f7",
+                      "secondary-fixed-dim": "#e6c364",
+                      "secondary-container": "#fed977",
+                      "border-subtle": "rgba(192, 200, 212, 0.35)",
+                      "silver-bright": "#F5F6F8",
+                      "secondary": "#755b00",
+                      "primary-container": "#6b0f1a",
+                      "on-surface": "#1a1c1b",
+                      "tertiary-container": "#2e363f",
+                      "on-secondary-container": "#785d00",
+                      "on-secondary-fixed": "#241a00",
+                      "tertiary-fixed": "#dbe3ef",
+                      "text-dark": "#1A0305",
+                      "tertiary-fixed-dim": "#bfc7d3",
+                      "primary-fixed-dim": "#ffb3b2",
+                      "maroon-deep": "#3D0408",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#410008",
+                      "on-error": "#ffffff",
+                      "maroon-mid": "#8B1A2A",
+                      "gold-light": "#E2C46A",
+                      "secondary-fixed": "#ffe08f",
+                      "inverse-surface": "#2f3130",
+                      "on-error-container": "#93000a",
+                      "surface-container-high": "#e8e8e6",
+                      "inverse-on-surface": "#f1f1ef",
+                      "surface-container": "#eeeeec",
+                      "background": "#f9f9f7",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e2e3e1",
+                      "footer-bg": "#1A0003",
+                      "on-tertiary-container": "#979faa",
+                      "on-primary-fixed-variant": "#84232a",
+                      "primary": "#49000a",
+                      "on-tertiary-fixed": "#141c25",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#ddc0bf",
+                      "on-primary-container": "#f4777a",
+                      "text-body": "#444444",
+                      "primary-fixed": "#ffdad9",
+                      "surface-container-highest": "#e2e3e1",
+                      "on-surface-variant": "#564241",
+                      "surface-dim": "#dadad8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-padding-v": "90px",
+                      "container-max": "1280px",
+                      "grid-gap-md": "32px",
+                      "grid-gap-lg": "80px",
+                      "card-padding": "28px",
+                      "section-padding-h": "32px"
+              },
+              "fontFamily": {
+                      "tagline-italic": ["Cormorant Garamond"],
+                      "nav-link": ["DM Sans"],
+                      "stat-number": ["Playfair Display"],
+                      "eyebrow": ["DM Sans"],
+                      "h2": ["Playfair Display"],
+                      "h3": ["Playfair Display"],
+                      "decorative-numeral": ["Cormorant Garamond"],
+                      "body": ["DM Sans"],
+                      "h1": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "tagline-italic": ["20px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "nav-link": ["13.5px", {"letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "stat-number": ["44px", {"lineHeight": "1", "fontWeight": "700"}],
+                      "eyebrow": ["11px", {"letterSpacing": "0.15em", "fontWeight": "700"}],
+                      "h2": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "decorative-numeral": ["48px", {"fontWeight": "400"}],
+                      "body": ["15px", {"lineHeight": "1.8", "fontWeight": "400"}],
+                      "h1": ["58px", {"lineHeight": "1.07", "fontWeight": "900"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .cinematic-glow {
+            background: radial-gradient(circle at top right, rgba(226, 196, 106, 0.15), transparent 60%),
+                        radial-gradient(circle at bottom left, rgba(107, 15, 26, 0.2), transparent 60%);
+        }
+        .dark-academic-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface font-body selection:bg-maroon-light selection:text-white">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 border-b-[3px] border-[#6B0F1A] bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto">
+<a class="text-lg font-black font-['Playfair_Display'] text-[#6B0F1A] dark:text-amber-500 uppercase tracking-tighter" href="index.html">
+                RMDIT Polytechnic
+            </a>
+<nav class="hidden lg:flex items-center space-x-8 font-['Playfair_Display'] text-sm tracking-wide uppercase font-semibold">
+<a class="text-[#6B0F1A] dark:text-amber-500 font-bold border-b-2 border-[#6B0F1A] pb-1" href="index.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Admission.html">Admissions</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Programmes.html">Programmes</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Faculty.html">Faculty</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Placement.html">Placements</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-maroon-mid">search</button>
+<a class="bg-[#6B0F1A] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-maroon-deep transition-all duration-300 active:scale-95 shadow-lg" href="Admission.html">
+                    Apply Now
+                </a>
+</div>
+</div>
+</header>
+<!-- News Marquee -->
+<div class="bg-secondary-container py-3 overflow-hidden border-y border-secondary">
+<div class="marquee-content whitespace-nowrap items-center font-eyebrow text-secondary uppercase text-[10px]">
+<span class="mx-8 flex items-center"><span class="material-symbols-outlined mr-2 text-xs">campaign</span> Admissions open for Academic Session 2024-25</span>
+<span class="mx-8 flex items-center"><span class="material-symbols-outlined mr-2 text-xs">diamond</span> Ranked Top Polytechnic Institute in the Region</span>
+<span class="mx-8 flex items-center"><span class="material-symbols-outlined mr-2 text-xs">campaign</span> Placement Drive starts next month for final year students</span>
+<span class="mx-8 flex items-center"><span class="material-symbols-outlined mr-2 text-xs">diamond</span> New IoT and Robotics Lab inaugurated by Industry Leaders</span>
+<!-- Repeat for loop -->
+<span class="mx-8 flex items-center"><span class="material-symbols-outlined mr-2 text-xs">campaign</span> Admissions open for Academic Session 2024-25</span>
+<span class="mx-8 flex items-center"><span class="material-symbols-outlined mr-2 text-xs">diamond</span> Ranked Top Polytechnic Institute in the Region</span>
+<span class="mx-8 flex items-center"><span class="material-symbols-outlined mr-2 text-xs">campaign</span> Placement Drive starts next month for final year students</span>
+<span class="mx-8 flex items-center"><span class="material-symbols-outlined mr-2 text-xs">diamond</span> New IoT and Robotics Lab inaugurated by Industry Leaders</span>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center bg-maroon-deep overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-maroon-deep via-maroon-deep/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic wide-angle shot of a grand institutional campus building at sunset. The architectural structure features classical stone pillars and large modern glass windows. Warm golden light spills from the interiors, contrasting with the deep maroon and navy shadows of the evening sky. The atmosphere is prestigious, serene, and academically rigorous." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLN6nl_vJbKWnRXLfe_1cg6B446lHph-OgSvCgFGqM37OWNibIqGJvkK0LEoNrDVo-_FQ1VhrZYxqnZFTa9uXNgv5d1RN5k8YP4UiEuD3AN1l95YNhGYT_EyRDOPBtqCr4qtre6fAL3bYx7lxwa_i-4jTVSskbVXMlbOkFoIea_I62bR6iYkJ1tQFjqilFnCc_pVcpEDILJt_0gaU_TCvvQ9TP2b_FXUDn64BbcACePak_Lz_xt0bqyMAVrP4DTbN8RiiILhHgVU8"/>
+</div>
+<div class="container max-w-[1280px] mx-auto px-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-8 flex flex-col justify-center">
+<span class="font-eyebrow text-gold-light uppercase tracking-[0.3em] mb-6 block">Legacy of Professional Excellence</span>
+<h1 class="font-h1 text-h1 text-white mb-8">Empowering The <br/><span class="italic font-tagline-italic text-gold-light">Technocrats</span> of Tomorrow.</h1>
+<p class="font-body text-silver-light/80 text-lg max-w-xl mb-10 leading-relaxed">
+                    At RMDIT, we blend traditional academic rigor with futuristic technical skills, preparing students for leadership in an ever-evolving global industrial landscape.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-gradient-to-r from-secondary-fixed-dim to-gold-light text-maroon-deep px-10 py-5 font-bold uppercase tracking-widest text-xs hover:translate-y-[-4px] transition-all shadow-[0_10px_20px_-5px_rgba(226,196,106,0.3)]" href="Programmes.html">
+                        Explore Programmes
+                    </a>
+<button class="border border-white/30 text-white hover:bg-white/10 px-10 py-5 font-bold uppercase tracking-widest text-xs transition-all">
+                        Virtual Tour
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-4 bg-white/5 backdrop-blur-md border border-white/10 p-10 self-center">
+<div class="space-y-12">
+<div class="border-l-4 border-gold-light pl-6">
+<span class="font-stat-number text-stat-number text-gold-light block mb-2">95%</span>
+<p class="font-eyebrow text-silver-light uppercase tracking-widest text-[10px]">Placement Rate</p>
+</div>
+<div class="border-l-4 border-gold-light pl-6">
+<span class="font-stat-number text-stat-number text-gold-light block mb-2">150+</span>
+<p class="font-eyebrow text-silver-light uppercase tracking-widest text-[10px]">Corporate Partners</p>
+</div>
+<div class="border-l-4 border-gold-light pl-6">
+<span class="font-stat-number text-stat-number text-gold-light block mb-2">25+</span>
+<p class="font-eyebrow text-silver-light uppercase tracking-widest text-[10px]">Years of Legacy</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Pillars -->
+<section class="py-section-padding-v bg-white">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-grid-gap-md">
+<div class="group">
+<div class="w-12 h-[3px] bg-secondary mb-6 transition-all group-hover:w-24"></div>
+<h3 class="font-h3 text-h3 text-maroon-deep mb-4">Innovation First</h3>
+<p class="font-body text-text-body">Fostering a culture of creativity and problem-solving through hands-on technical labs and research projects.</p>
+</div>
+<div class="group">
+<div class="w-12 h-[3px] bg-secondary mb-6 transition-all group-hover:w-24"></div>
+<h3 class="font-h3 text-h3 text-maroon-deep mb-4">Industry Aligned</h3>
+<p class="font-body text-text-body">Curriculum designed in collaboration with industry experts to ensure graduates are career-ready from day one.</p>
+</div>
+<div class="group">
+<div class="w-12 h-[3px] bg-secondary mb-6 transition-all group-hover:w-24"></div>
+<h3 class="font-h3 text-h3 text-maroon-deep mb-4">Ethical Leadership</h3>
+<p class="font-body text-text-body">Developing professionals who are committed to social responsibility and sustainable technological practices.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-padding-v bg-surface-container-low overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-grid-gap-lg items-center">
+<div class="relative">
+<div class="absolute -top-12 -left-12 font-decorative-numeral text-[180px] text-maroon-light opacity-5 leading-none select-none">1998</div>
+<img class="w-full h-[600px] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="A high-quality black and white editorial photograph of group of diverse engineering students collaborating around a complex architectural model in a brightly lit studio. The lighting is soft and professional, highlighting the textures of the materials and the focused expressions of the students. The image transitions to vibrant colors when hovered, revealing subtle gold and maroon details in their clothing and equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbie1XfsRV5foWFMj20QE8Jq7YGglrelCc2aU9YeUT0sf6ut3cruWXc0cX0UQciLTq-aaJ1mDHcLoPxmYHADoF16DHxv2cgxQUAm7GNaji1_u2_VIsOd0NViiGUDSCmMf4GZBD8qHijTjy9q8hshWYcsGXz9AkuVDMADt4HjfiU4LtVOq59wkwSw1E0PUIy-yRQHpuv9PK0idpNKJSFymW1_2vyUPjSkGwnf0fKnYNgLtrGZ5GCpQanVj6JV4fpHpPFULSWARoy7I"/>
+<div class="absolute -bottom-8 -right-8 bg-maroon-deep p-12 text-white max-w-xs shadow-xl border-t-4 border-gold-light">
+<p class="font-tagline-italic text-tagline-italic italic mb-4">"A legacy built on precision and progress."</p>
+<span class="font-eyebrow text-[10px] uppercase tracking-widest text-gold-light">— Institutional Vision</span>
+</div>
+</div>
+<div>
+<span class="font-eyebrow text-maroon-light uppercase tracking-[0.2em] mb-4 block">Institutional Profile</span>
+<h2 class="font-h2 text-h2 text-maroon-deep mb-8">Nurturing Excellence for Over Two Decades</h2>
+<p class="font-body text-text-body text-lg mb-8 leading-relaxed">
+                    Rasiklal M. Dhariwal Institute of Technology stands as a beacon of technical education in the region. Founded on the principles of integrity and merit, we provide a holistic learning environment that transcends textbook knowledge.
+                </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1">verified_user</span>
+<span class="font-body font-bold text-maroon-deep">AICTE Approved &amp; Globally Recognized Curriculum</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1">verified_user</span>
+<span class="font-body font-bold text-maroon-deep">State-of-the-art Infrastructure &amp; Smart Classrooms</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1">verified_user</span>
+<span class="font-body font-bold text-maroon-deep">Mentorship by Industry Veterans &amp; Ph.D. Scholars</span>
+</li>
+</ul>
+<button class="group flex items-center font-bold text-maroon-mid hover:text-maroon-light transition-colors uppercase tracking-widest text-xs">
+                    Read Our History
+                    <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Courses Grid -->
+<section class="py-section-padding-v bg-maroon-deep relative overflow-hidden cinematic-glow">
+<div class="max-w-[1280px] mx-auto px-8 relative z-10">
+<div class="text-center mb-16">
+<span class="font-eyebrow text-gold-light uppercase tracking-[0.3em] mb-4 block">Academic Departments</span>
+<h2 class="font-h2 text-h2 text-white">World-Class Diploma Programmes</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Course Card 1 -->
+<div class="dark-academic-card p-10 border-t-2 border-gold-light hover:translate-y-[-8px] transition-all duration-500 group">
+<span class="font-decorative-numeral text-white opacity-10 text-6xl block mb-4 group-hover:opacity-30 transition-opacity">01</span>
+<h3 class="font-h3 text-h3 text-gold-light mb-4">Mechanical Engineering</h3>
+<p class="font-body text-silver-light/70 mb-8">Master the principles of energy, materials, and mechanics to design and build the future of machinery.</p>
+<a class="inline-flex items-center text-white font-bold text-xs uppercase tracking-widest border-b border-gold-light pb-1 hover:text-gold-light transition-colors" href="Programmes.html">
+                        View Department <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span>
+</a>
+</div>
+<!-- Course Card 2 -->
+<div class="dark-academic-card p-10 border-t-2 border-gold-light hover:translate-y-[-8px] transition-all duration-500 group">
+<span class="font-decorative-numeral text-white opacity-10 text-6xl block mb-4 group-hover:opacity-30 transition-opacity">02</span>
+<h3 class="font-h3 text-h3 text-gold-light mb-4">Computer Technology</h3>
+<p class="font-body text-silver-light/70 mb-8">Deep dive into software development, artificial intelligence, and network security architectures.</p>
+<a class="inline-flex items-center text-white font-bold text-xs uppercase tracking-widest border-b border-gold-light pb-1 hover:text-gold-light transition-colors" href="Programmes.html">
+                        View Department <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span>
+</a>
+</div>
+<!-- Course Card 3 -->
+<div class="dark-academic-card p-10 border-t-2 border-gold-light hover:translate-y-[-8px] transition-all duration-500 group">
+<span class="font-decorative-numeral text-white opacity-10 text-6xl block mb-4 group-hover:opacity-30 transition-opacity">03</span>
+<h3 class="font-h3 text-h3 text-gold-light mb-4">Civil Engineering</h3>
+<p class="font-body text-silver-light/70 mb-8">Building sustainable infrastructure and architectural marvels with precision and structural integrity.</p>
+<a class="inline-flex items-center text-white font-bold text-xs uppercase tracking-widest border-b border-gold-light pb-1 hover:text-gold-light transition-colors" href="Programmes.html">
+                        View Department <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span>
+</a>
+</div>
+<!-- Course Card 4 -->
+<div class="dark-academic-card p-10 border-t-2 border-gold-light hover:translate-y-[-8px] transition-all duration-500 group">
+<span class="font-decorative-numeral text-white opacity-10 text-6xl block mb-4 group-hover:opacity-30 transition-opacity">04</span>
+<h3 class="font-h3 text-h3 text-gold-light mb-4">Electrical Engineering</h3>
+<p class="font-body text-silver-light/70 mb-8">Innovating power systems and electronic control mechanisms for the smart cities of tomorrow.</p>
+<a class="inline-flex items-center text-white font-bold text-xs uppercase tracking-widest border-b border-gold-light pb-1 hover:text-gold-light transition-colors" href="Programmes.html">
+                        View Department <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span>
+</a>
+</div>
+<!-- Course Card 5 -->
+<div class="dark-academic-card p-10 border-t-2 border-gold-light hover:translate-y-[-8px] transition-all duration-500 group">
+<span class="font-decorative-numeral text-white opacity-10 text-6xl block mb-4 group-hover:opacity-30 transition-opacity">05</span>
+<h3 class="font-h3 text-h3 text-gold-light mb-4">E&amp;TC Engineering</h3>
+<p class="font-body text-silver-light/70 mb-8">Focusing on high-speed communication, signal processing, and embedded system design.</p>
+<a class="inline-flex items-center text-white font-bold text-xs uppercase tracking-widest border-b border-gold-light pb-1 hover:text-gold-light transition-colors" href="Programmes.html">
+                        View Department <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span>
+</a>
+</div>
+<!-- Course Card 6 -->
+<div class="dark-academic-card p-10 border-t-2 border-gold-light hover:translate-y-[-8px] transition-all duration-500 group">
+<span class="font-decorative-numeral text-white opacity-10 text-6xl block mb-4 group-hover:opacity-30 transition-opacity">06</span>
+<h3 class="font-h3 text-h3 text-gold-light mb-4">Science &amp; Humanities</h3>
+<p class="font-body text-silver-light/70 mb-8">Foundational excellence in mathematics, physics, and soft skills for a complete engineering perspective.</p>
+<a class="inline-flex items-center text-white font-bold text-xs uppercase tracking-widest border-b border-gold-light pb-1 hover:text-gold-light transition-colors" href="Programmes.html">
+                        View Department <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Admissions Section -->
+<section class="py-section-padding-v bg-white">
+<div class="max-w-[1280px] mx-auto px-8 flex flex-col lg:flex-row gap-grid-gap-lg">
+<div class="lg:w-1/2">
+<span class="font-eyebrow text-maroon-mid uppercase tracking-widest mb-4 block">Enrollment Process</span>
+<h2 class="font-h2 text-h2 text-maroon-deep mb-12">How to Secure Your Future at RMDIT</h2>
+<div class="space-y-12">
+<div class="flex gap-8 items-start">
+<div class="w-16 h-16 rounded-full border-2 border-maroon-mid flex-shrink-0 flex items-center justify-center font-stat-number text-maroon-mid text-2xl">1</div>
+<div>
+<h4 class="font-h3 text-xl text-maroon-deep mb-2">Check Eligibility</h4>
+<p class="font-body text-text-body">Review the academic requirements and entrance test prerequisites for your desired engineering stream.</p>
+</div>
+</div>
+<div class="flex gap-8 items-start">
+<div class="w-16 h-16 rounded-full border-2 border-maroon-mid flex-shrink-0 flex items-center justify-center font-stat-number text-maroon-mid text-2xl">2</div>
+<div>
+<h4 class="font-h3 text-xl text-maroon-deep mb-2">Online Application</h4>
+<p class="font-body text-text-body">Fill out the detailed digital application form and upload necessary scholastic documentation.</p>
+</div>
+</div>
+<div class="flex gap-8 items-start">
+<div class="w-16 h-16 rounded-full border-2 border-maroon-mid flex-shrink-0 flex items-center justify-center font-stat-number text-maroon-mid text-2xl">3</div>
+<div>
+<h4 class="font-h3 text-xl text-maroon-deep mb-2">Counselling &amp; Verification</h4>
+<p class="font-body text-text-body">Participate in the institutional counselling rounds followed by document verification and fee submission.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="bg-maroon-deep p-12 shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gold-light opacity-10 rounded-full translate-x-16 -translate-y-16"></div>
+<h3 class="font-h3 text-h3 text-gold-light mb-8">Inquire for Admission</h3>
+<form class="space-y-6">
+<div>
+<label class="font-eyebrow text-white uppercase text-[10px] mb-2 block tracking-widest">Full Name</label>
+<input class="w-full bg-white/5 border border-white/20 text-white p-4 focus:ring-0 focus:border-gold-light transition-colors" placeholder="Enter your full legal name" type="text"/>
+</div>
+<div>
+<label class="font-eyebrow text-white uppercase text-[10px] mb-2 block tracking-widest">Email Address</label>
+<input class="w-full bg-white/5 border border-white/20 text-white p-4 focus:ring-0 focus:border-gold-light transition-colors" placeholder="yourname@example.com" type="email"/>
+</div>
+<div>
+<label class="font-eyebrow text-white uppercase text-[10px] mb-2 block tracking-widest">Preferred Programme</label>
+<select class="w-full bg-white/5 border border-white/20 text-white p-4 focus:ring-0 focus:border-gold-light transition-colors appearance-none">
+<option class="bg-maroon-deep">Computer Technology</option>
+<option class="bg-maroon-deep">Mechanical Engineering</option>
+<option class="bg-maroon-deep">Civil Engineering</option>
+<option class="bg-maroon-deep">Electrical Engineering</option>
+</select>
+</div>
+<button class="w-full bg-gold-light text-maroon-deep py-5 font-bold uppercase tracking-widest text-xs hover:bg-white transition-all">Submit Enquiry</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Placements Section -->
+<section class="py-section-padding-v bg-surface-container-high border-y border-maroon-light/10">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+<div class="lg:w-1/2">
+<span class="font-eyebrow text-maroon-mid uppercase tracking-[0.3em] mb-4 block">Corporate Engagement</span>
+<h2 class="font-h2 text-h2 text-maroon-deep">Elite Placements with Global Industry Giants</h2>
+</div>
+<a class="border-2 border-maroon-mid text-maroon-mid px-10 py-4 font-bold uppercase tracking-widest text-xs hover:bg-maroon-mid hover:text-white transition-all" href="Placement.html">
+                    View Placement Report
+                </a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="bg-white p-10 text-center border-b-4 border-gold-light shadow-sm">
+<span class="font-stat-number text-stat-number text-maroon-deep mb-2 block">12 LPA</span>
+<p class="font-eyebrow text-maroon-light/60 uppercase text-[10px] tracking-widest leading-tight">Highest Package Offered</p>
+</div>
+<div class="bg-white p-10 text-center border-b-4 border-gold-light shadow-sm">
+<span class="font-stat-number text-stat-number text-maroon-deep mb-2 block">4.5 LPA</span>
+<p class="font-eyebrow text-maroon-light/60 uppercase text-[10px] tracking-widest leading-tight">Average Package</p>
+</div>
+<div class="bg-white p-10 text-center border-b-4 border-gold-light shadow-sm">
+<span class="font-stat-number text-stat-number text-maroon-deep mb-2 block">50+</span>
+<p class="font-eyebrow text-maroon-light/60 uppercase text-[10px] tracking-widest leading-tight">Fortune 500 Recruiters</p>
+</div>
+<div class="bg-white p-10 text-center border-b-4 border-gold-light shadow-sm">
+<span class="font-stat-number text-stat-number text-maroon-deep mb-2 block">100%</span>
+<p class="font-eyebrow text-maroon-light/60 uppercase text-[10px] tracking-widest leading-tight">Internship Opportunities</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Faculty Profiles -->
+<section class="py-section-padding-v bg-white">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="text-center mb-20">
+<span class="font-eyebrow text-maroon-mid uppercase tracking-[0.3em] mb-4 block">Academic Leadership</span>
+<h2 class="font-h2 text-h2 text-maroon-deep">Our Distinguished Faculty</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
+<!-- Faculty Card 1 -->
+<div class="group">
+<div class="overflow-hidden mb-6 relative">
+<img class="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="A professional studio portrait of a senior female academic with glasses, dressed in a formal charcoal blazer. She has a confident and welcoming expression. The background is a minimalist light-grey, creating a clean, high-end editorial feel. The lighting is soft and directional, highlighting the contours of her face and the professional aesthetic of the institution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-VUjj_p02QY3ooZwKkvcKrcFei_u82Dhmiz5oohTkEdJzb2sclZuyCZ3WvmrLB7lmAU9-6QW0mG8skRghvMELmr_pOXAe_coDhLoDYVfzJgz0tw98GLfNy9Po9KpPX56tWVtf5dDMXeGBS129FarJr6wLvkqYD0cZA8GdNizaFk6yyRj8e_YvfBDQeu9cvTjQ302tumdWdTXO5Z_suMOsYQ8VL9eS6Oj45Gt_tUSUmLk96Srqk5IM3fWZOc7HRhSXCNmjB-yWkNY"/>
+<div class="absolute bottom-0 left-0 bg-gold-light p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-maroon-deep">contact_mail</span>
+</div>
+</div>
+<h4 class="font-h3 text-xl text-maroon-deep mb-1">Dr. Ananya Sharma</h4>
+<p class="font-eyebrow text-[10px] text-maroon-mid uppercase tracking-widest mb-2">Dean of Academics</p>
+<p class="font-body text-text-body text-sm">Ph.D. in Mechanical Design, MIT Alumna</p>
+</div>
+<!-- Faculty Card 2 -->
+<div class="group">
+<div class="overflow-hidden mb-6 relative">
+<img class="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="A formal professional headshot of a male professor in his late 40s wearing a dark navy suit and a white shirt. He has a thoughtful and authoritative demeanor. The setting is a library with blurred books in the background, reinforcing the academic environment. The color palette is composed of deep blues, whites, and warm wood tones, consistent with a premium institutional brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfisO4Pozd403HzTCTj0eXHfwxEQh82Pu6kW7Pp2OmyvETvMx3y5V9MAHD-PIhQkshjQIHJj-ilLyqLBhdxOfFe8mFTyPKnxYciDy3guhYk6PSblQzC5W5TzfBEI1NRvIUCu6Z-NCNmtw4fkuX0_5VJIGSkzlkk2JUDq4_6wWFbfSpsMdzEn4AlIhOohAxRuB3tMxcgNWtwMP6YipMSihAZqVzngi3KREmblXR6j77d2BkK3wRnghPu_s65mRa2LM7qLiP29nAkgg"/>
+<div class="absolute bottom-0 left-0 bg-gold-light p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-maroon-deep">contact_mail</span>
+</div>
+</div>
+<h4 class="font-h3 text-xl text-maroon-deep mb-1">Prof. Vikram Malhotra</h4>
+<p class="font-eyebrow text-[10px] text-maroon-mid uppercase tracking-widest mb-2">HOD, Computer Dept.</p>
+<p class="font-body text-text-body text-sm">M.Tech in AI &amp; Robotics, 20+ Yrs Exp.</p>
+</div>
+<!-- Faculty Card 3 -->
+<div class="group">
+<div class="overflow-hidden mb-6 relative">
+<img class="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="A professional portrait of a young female lecturer with a friendly and intelligent expression. She is wearing a traditional yet modern saree with gold accents. The lighting is bright and natural, as if taken in a sunlit classroom. The image exudes warmth, accessibility, and high intellectual capability, matching the institutional focus on mentorship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6nNvxX2T6rrombJDHwjUdR92pS4JQ-yI--od79TQ48JCAgDwOf6vdXx7QXlTFPNLn0OYgOFd7BYLH2bNCv8GhNvq_O5X8pUuehwmb6TIkdkKkChHzHhfrCTdwJJWbbtTFW8mVPiZqox9eZ46J5xkpKZUMHILppfcS-HdIjP5jasVAiDXUtRTG7EwcHAAMgUkfNJOEdCBnn2ohEY6LHFFUsZqBAnrQOU8diEIitf5MMdsouEe0-KLRq7GRQLpf1yRq2B7I1aHHrFo"/>
+<div class="absolute bottom-0 left-0 bg-gold-light p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-maroon-deep">contact_mail</span>
+</div>
+</div>
+<h4 class="font-h3 text-xl text-maroon-deep mb-1">Ms. Priya Deshmukh</h4>
+<p class="font-eyebrow text-[10px] text-maroon-mid uppercase tracking-widest mb-2">Lecturer, Civil Dept.</p>
+<p class="font-body text-text-body text-sm">Specialist in Sustainable Architecture</p>
+</div>
+<!-- Faculty Card 4 -->
+<div class="group">
+<div class="overflow-hidden mb-6 relative">
+<img class="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" data-alt="A sharp, professional headshot of a male faculty member in his early 30s. He is wearing a maroon tie and a grey shirt, echoing the school's brand colors. He has a clean-cut look and an energetic smile. The lighting is high-key and modern, making the image pop with clarity. He represents the young, innovative energy of the polytechnic institute's staff." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZhYgz_rkjNNuWPSNweVNJhPDccQ5zAuZ-CaMn0o9EY9HzlGpTSFio1lTWQQmlz1jFYJyMT2vvGtkeLMdP1M9UjVrkqTZbmT3JWJjJZmVRBpgPzPJNpEj4aoKQjyDm5tMeOd2SrkVA9R9BmWGTrgzhQze02akBvArTcMrCKb2EhJL6KUj8ivEH4X7c4w1bR0KasKskuSIzb3rIzreyt_26R4TUinoA-55YRKA2ftqHwNPpAcvaAK9G1jcAjVCEUXEE2cqIvCcFY_M"/>
+<div class="absolute bottom-0 left-0 bg-gold-light p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-maroon-deep">contact_mail</span>
+</div>
+</div>
+<h4 class="font-h3 text-xl text-maroon-deep mb-1">Mr. Rahul Kulkarni</h4>
+<p class="font-eyebrow text-[10px] text-maroon-mid uppercase tracking-widest mb-2">Workshop Superintendent</p>
+<p class="font-body text-text-body text-sm">Expert in CNC Machining &amp; Automation</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#6B0F1A] dark:bg-stone-900 border-t-4 border-amber-500 w-full font-['Playfair_Display'] text-stone-200">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 py-20 px-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-bold text-amber-500 mb-6">RMDIT</div>
+<p class="font-body text-stone-300 text-sm leading-relaxed mb-6">
+                    Rasiklal M. Dhariwal Institute of Technology is dedicated to providing high-quality technical education that empowers students to achieve global standards of professional excellence.
+                </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="mailto:admissions@rmdit.edu.in">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-amber-500 hover:text-maroon-deep transition-all duration-300" href="tel:+912135123456">
+<span class="material-symbols-outlined text-sm">phone_in_talk</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="index.html">Home</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Admission.html">Admissions</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Programmes</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Placement.html">Placements</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Faculty.html">Faculty</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Departments</h5>
+<ul class="space-y-4 text-stone-300">
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Computer Technology</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Mechanical Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Civil Engineering</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electronics &amp; Telecomm</a></li>
+<li><a class="hover:text-white hover:translate-x-1 transition-transform inline-block" href="Programmes.html">Electrical Engineering</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-amber-400 font-bold mb-6 uppercase tracking-widest text-xs">Campus Location</h5>
+<p class="font-body text-stone-300 text-sm mb-6">
+                    Akurdi, Near Railway Station,<br/>
+                    Sector No. 27-A, Pradhikaran,<br/>
+                    Pune, Maharashtra 411044
+                </p>
+<div class="h-40 bg-stone-800 rounded-sm overflow-hidden grayscale">
+<img class="w-full h-full object-cover opacity-50" data-alt="A stylized digital map view showing the city of Pune, India, with a prominent pin marking the location of the RMDIT campus. The map uses a sophisticated dark-mode aesthetic with golden lines and markers, aligning with the premium institutional brand. The visualization is clean, professional, and emphasizes the strategic location of the institute." data-location="Pune, India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGNFSUJXY3Pr-4gYFepv09isUFA7jOdC-klGHziPjfLPuHDAKGDEWMLHGvcOdnpOTGJR_eUCdakfP4mvw5bVtD_dWS2UPb2iqicYhNFzIIsUAoNTP4KsHNds5ByPWwAuqvO5A1MiV1N_15aL8NTloJ_sMoOTfMyccaT2oZj9wgTMIRw2LXjE8SnbRFWE1ioVqCK202CPLyLM03jPXWMe_1pqyrBDM2Ak0bphUZiplzo5V5XrK6wKxgAjI_zoE3DzxQQ6p7E5kpmgc"/>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8">
+<div class="max-w-[1280px] mx-auto px-12 text-center text-stone-400 text-[11px] font-body tracking-widest uppercase">
+                © 2024 Rasiklal M. Dhariwal Institute of Technology. Institutional Excellence Since Inception.
+            </div>
+</div>
+</footer>
+</body></html>
