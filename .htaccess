@@ -1,0 +1,63 @@
+RewriteEngine On
+
+# Redirect legacy file URLs to clean slugs.
+RewriteRule ^index\.html$ / [R=301,L,NC]
+RewriteRule ^Admissions/Admission\.html$ /admissions [R=301,L,NC]
+RewriteRule ^Placements/Placement\.html$ /placements [R=301,L,NC]
+RewriteRule ^Faculty/Faculty\.html$ /faculty [R=301,L,NC]
+RewriteRule ^Faculty/Faculty(?:\s|%20)details/index\.html$ /faculty/details [R=301,L,NC]
+RewriteRule ^Faculty/Photos/index\.html$ /faculty/photos [R=301,L,NC]
+RewriteRule ^Programmee/Programmes\.html$ /programmes [R=301,L,NC]
+RewriteRule ^Programmee/Blog/index\.html$ /programmes/blog [R=301,L,NC]
+RewriteRule ^Programmee/Facilities/index\.html$ /programmes/facilities [R=301,L,NC]
+RewriteRule ^Programmee/Facilities/Photos/index\.html$ /programmes/facilities/photos [R=301,L,NC]
+RewriteRule ^Programmee/Department/Computer(?:\s|%20)Department/index\.html$ /programmes/departments/computer [R=301,L,NC]
+RewriteRule ^Programmee/Department/Mechanical(?:\s|%20)Department/index\.html$ /programmes/departments/mechanical [R=301,L,NC]
+RewriteRule ^Programmee/Department/Automobile(?:\s|%20)Deprtment/index\.html$ /programmes/departments/automobile [R=301,L,NC]
+RewriteRule ^Programmee/Department/Artificial(?:\s|%20)Intelligence(?:\s|%20)and(?:\s|%20)Machine(?:\s|%20)learning(?:\s|%20)Department/index\.html$ /programmes/departments/aiml [R=301,L,NC]
+RewriteRule ^Events/index\.html$ /events [R=301,L,NC]
+RewriteRule ^Events/Curricular/index\.html$ /events/curricular [R=301,L,NC]
+RewriteRule ^Events/Co(?:\s|%20)-(?:\s|%20)Curricular/index\.html$ /events/co-curricular [R=301,L,NC]
+RewriteRule ^Events/Extra(?:\s|%20)Curricular/index\.html$ /events/extra-curricular [R=301,L,NC]
+RewriteRule ^Events/Social(?:\s|%20)Activities/index\.html$ /events/social-activities [R=301,L,NC]
+RewriteRule ^About(?:\s|%20)Us/index\.html$ /about [R=301,L,NC]
+RewriteRule ^About(?:\s|%20)Us/About(?:\s|%20)Trust/index\.html$ /about/trust [R=301,L,NC]
+RewriteRule ^About(?:\s|%20)Us/Adminstration/index\.html$ /about/administration [R=301,L,NC]
+RewriteRule ^About(?:\s|%20)Us/Authority/index\.html$ /about/authority [R=301,L,NC]
+RewriteRule ^About(?:\s|%20)Us/Board(?:\s|%20)of(?:\s|%20)Governments/index\.html$ /about/board-of-governments [R=301,L,NC]
+
+# Internal rewrites for clean slugs.
+RewriteRule ^admissions/?$ admissions/Admission.html [L,NC]
+RewriteRule ^placements/?$ placements/Placement.html [L,NC]
+RewriteRule ^faculty/?$ faculty/Faculty.html [L,NC]
+RewriteRule ^faculty/details/?$ faculty/Faculty%20details/index.html [L,NC]
+RewriteRule ^faculty/photos/?$ faculty/photos/index.html [L,NC]
+RewriteRule ^programmes/?$ Programmee/Programmes.html [L,NC]
+RewriteRule ^programmes/blog/?$ Programmee/Blog/index.html [L,NC]
+RewriteRule ^programmes/facilities/?$ Programmee/Facilities/index.html [L,NC]
+RewriteRule ^programmes/facilities/photos/?$ Programmee/Facilities/Photos/index.html [L,NC]
+RewriteRule ^programmes/departments/computer/?$ Programmee/Department/Computer%20Department/index.html [L,NC]
+RewriteRule ^programmes/departments/mechanical/?$ Programmee/Department/Mechanical%20Department/index.html [L,NC]
+RewriteRule ^programmes/departments/automobile/?$ Programmee/Department/Automobile%20Deprtment/index.html [L,NC]
+RewriteRule ^programmes/departments/aiml/?$ Programmee/Department/Artificial%20Intelligence%20and%20Machine%20learning%20Department/index.html [L,NC]
+RewriteRule ^events/?$ events/index.html [L,NC]
+RewriteRule ^events/curricular/?$ events/curricular/index.html [L,NC]
+RewriteRule ^events/co-curricular/?$ events/Co%20-%20Curricular/index.html [L,NC]
+RewriteRule ^events/extra-curricular/?$ events/Extra%20Curricular/index.html [L,NC]
+RewriteRule ^events/social-activities/?$ events/Social%20Activities/index.html [L,NC]
+RewriteRule ^about/?$ About%20Us/index.html [L,NC]
+RewriteRule ^about/trust/?$ About%20Us/About%20Trust/index.html [L,NC]
+RewriteRule ^about/administration/?$ About%20Us/Adminstration/index.html [L,NC]
+RewriteRule ^about/authority/?$ About%20Us/Authority/index.html [L,NC]
+RewriteRule ^about/board-of-governments/?$ About%20Us/Board%20of%20Governments/index.html [L,NC]
+
+# Generic extensionless support for direct file paths.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.+?)/?$ $1/index.html [L]
