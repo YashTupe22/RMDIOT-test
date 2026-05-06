@@ -133,6 +133,23 @@
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
         }
+        .hero-slide {
+            visibility: hidden;
+            animation: heroSwitch 25s infinite step-end;
+        }
+        .hero-slide:nth-of-type(1) { animation-delay: 0s; }
+        .hero-slide:nth-of-type(2) { animation-delay: 5s; }
+        .hero-slide:nth-of-type(3) { animation-delay: 10s; }
+        .hero-slide:nth-of-type(4) { animation-delay: 15s; }
+        .hero-slide:nth-of-type(5) { animation-delay: 20s; }
+        @keyframes heroSwitch {
+            0%, 19.99% { visibility: visible; }
+            20%, 100% { visibility: hidden; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-slide { animation: none; }
+            .hero-slide:first-of-type { visibility: visible; }
+        }
     </style>
 </head>
 <body class="bg-surface-bright text-on-surface font-body selection:bg-maroon-light selection:text-white">
@@ -211,41 +228,56 @@
 </div>
 </div>
 <!-- Hero Section -->
-<section class="relative min-h-[870px] flex items-center bg-maroon-deep overflow-hidden">
+<section class="relative min-h-[760px] flex items-center bg-maroon-deep overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-r from-maroon-deep via-maroon-deep/80 to-transparent z-10"></div>
-<img class="w-full h-full object-cover" data-alt="A cinematic wide-angle shot of a grand institutional campus building at sunset. The architectural structure features classical stone pillars and large modern glass windows. Warm golden light spills from the interiors, contrasting with the deep maroon and navy shadows of the evening sky. The atmosphere is prestigious, serene, and academically rigorous." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLN6nl_vJbKWnRXLfe_1cg6B446lHph-OgSvCgFGqM37OWNibIqGJvkK0LEoNrDVo-_FQ1VhrZYxqnZFTa9uXNgv5d1RN5k8YP4UiEuD3AN1l95YNhGYT_EyRDOPBtqCr4qtre6fAL3bYx7lxwa_i-4jTVSskbVXMlbOkFoIea_I62bR6iYkJ1tQFjqilFnCc_pVcpEDILJt_0gaU_TCvvQ9TP2b_FXUDn64BbcACePak_Lz_xt0bqyMAVrP4DTbN8RiiILhHgVU8"/>
+<img alt="RMDIT campus slideshow image 1" class="hero-slide absolute inset-0 w-full h-full object-cover" src="Assets/SlideShow/1.png"/>
+<img alt="RMDIT campus slideshow image 2" class="hero-slide absolute inset-0 w-full h-full object-cover" src="Assets/SlideShow/2.jpeg"/>
+<img alt="RMDIT campus slideshow image 3" class="hero-slide absolute inset-0 w-full h-full object-cover" src="Assets/SlideShow/3.jpeg"/>
+<img alt="RMDIT campus slideshow image 4" class="hero-slide absolute inset-0 w-full h-full object-cover" src="Assets/SlideShow/4.jpeg"/>
+<img alt="RMDIT campus slideshow image 5" class="hero-slide absolute inset-0 w-full h-full object-cover" src="Assets/SlideShow/5.jpeg"/>
 </div>
-<div class="container max-w-[1280px] mx-auto px-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12">
-<div class="lg:col-span-8 flex flex-col justify-center">
-<span class="font-eyebrow text-gold-light uppercase tracking-[0.3em] mb-6 block">Legacy of Professional Excellence</span>
-<h1 class="font-h1 text-h1 text-white mb-8">Empowering The <br/><span class="italic font-tagline-italic text-gold-light">Technocrats</span> of Tomorrow.</h1>
-<p class="font-body text-silver-light/80 text-lg max-w-xl mb-10 leading-relaxed">
-                    At RMDIT, we blend traditional academic rigor with futuristic technical skills, preparing students for leadership in an ever-evolving global industrial landscape.
+<div class="container max-w-[1280px] mx-auto px-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 py-24">
+<div class="lg:col-span-7 flex flex-col justify-center">
+<div class="border-l-4 border-gold-light pl-6 md:pl-8 max-w-3xl">
+<span class="font-eyebrow text-gold-light uppercase tracking-[0.3em] mb-5 block">Admissions Open 2024-25</span>
+<h1 class="font-h1 text-[40px] md:text-h1 text-white mb-7">Build Your Technical Career at RMDIT Polytechnic</h1>
+<p class="font-body text-silver-light text-lg max-w-2xl mb-9 leading-relaxed">
+                    Learn through practical labs, experienced faculty, industry-focused programmes, and a campus environment built for diploma engineering success.
                 </p>
 <div class="flex flex-wrap gap-4">
-<a class="bg-gradient-to-r from-secondary-fixed-dim to-gold-light text-maroon-deep px-10 py-5 font-bold uppercase tracking-widest text-xs hover:translate-y-[-4px] transition-all shadow-[0_10px_20px_-5px_rgba(226,196,106,0.3)]" href="Programmee/Programmes.html">
-                        Explore Programmes
+<a class="bg-gold-light text-maroon-deep px-8 md:px-10 py-4 md:py-5 font-bold uppercase tracking-widest text-xs hover:bg-secondary-fixed-dim hover:translate-y-[-4px] transition-all shadow-[0_10px_20px_-5px_rgba(226,196,106,0.3)]" href="Admissions/Admission.html">
+                        Apply for Admission
                     </a>
-<button class="border border-white/30 text-white hover:bg-white/10 px-10 py-5 font-bold uppercase tracking-widest text-xs transition-all">
-                        Virtual Tour
-                    </button>
+<a class="border border-white/40 text-white hover:bg-white/10 px-8 md:px-10 py-4 md:py-5 font-bold uppercase tracking-widest text-xs transition-all" href="Programmee/Programmes.html">
+                        View Programmes
+                    </a>
 </div>
 </div>
-<div class="lg:col-span-4 bg-white/5 backdrop-blur-md border border-white/10 p-10 self-center">
-<div class="space-y-12">
-<div class="border-l-4 border-gold-light pl-6">
-<span class="font-stat-number text-stat-number text-gold-light block mb-2">95%</span>
-<p class="font-eyebrow text-silver-light uppercase tracking-widest text-[10px]">Placement Rate</p>
 </div>
-<div class="border-l-4 border-gold-light pl-6">
-<span class="font-stat-number text-stat-number text-gold-light block mb-2">150+</span>
-<p class="font-eyebrow text-silver-light uppercase tracking-widest text-[10px]">Corporate Partners</p>
+<div class="lg:col-span-5 self-end lg:self-center">
+<div class="bg-white border border-white p-7 md:p-8 max-w-sm lg:ml-auto shadow-2xl">
+<p class="font-eyebrow text-maroon-mid uppercase tracking-widest text-[10px] mb-4">Why choose RMDIT</p>
+<div class="space-y-5">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-maroon-mid">engineering</span>
+<p class="font-body text-text-body text-sm leading-relaxed">Hands-on diploma engineering programmes</p>
 </div>
-<div class="border-l-4 border-gold-light pl-6">
-<span class="font-stat-number text-stat-number text-gold-light block mb-2">25+</span>
-<p class="font-eyebrow text-silver-light uppercase tracking-widest text-[10px]">Years of Legacy</p>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-maroon-mid">school</span>
+<p class="font-body text-text-body text-sm leading-relaxed">Experienced faculty and structured mentoring</p>
 </div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-maroon-mid">work</span>
+<p class="font-body text-text-body text-sm leading-relaxed">Placement support and industry exposure</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2 mt-6 lg:justify-end" aria-label="Hero slideshow images">
+<span class="w-8 h-1 bg-gold-light block"></span>
+<span class="w-8 h-1 bg-white block"></span>
+<span class="w-8 h-1 bg-white block"></span>
+<span class="w-8 h-1 bg-white block"></span>
+<span class="w-8 h-1 bg-white block"></span>
 </div>
 </div>
 </div>
