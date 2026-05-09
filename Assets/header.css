@@ -1,0 +1,268 @@
+/* ═══════════════════════════════════════════════
+   RMDIOT — Shared Header CSS
+   Covers: logo-block, header-inner, mobile-menu,
+   responsive breakpoints, zoom-safe layout
+   ═══════════════════════════════════════════════ */
+
+/* Global reset helpers */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── Logo Block ── */
+.logo-block {
+    background-color: #6B0F1A;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 32px 0 20px;
+    height: 100%;
+    gap: 12px;
+    flex-shrink: 0;
+    text-decoration: none;
+    transition: padding 0.2s ease, border-radius 0.2s ease;
+}
+
+.logo-block img {
+    height: 42px;
+    width: 42px;
+    object-fit: contain;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.logo-block .college-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(0.7rem, 1.15vw, 1rem);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* ── Header Inner (nav + actions wrapper) ── */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* actions flush right */
+    flex: 1;
+    min-width: 0;
+    padding: 0 1.5rem;
+    height: 100%;
+    overflow: visible;
+    /* NOTE: no position:relative here — nav must anchor to header-row */
+}
+
+/* True-centre the nav across the FULL header width */
+@media (min-width: 1024px) {
+    .header-row {
+        position: relative; /* nav anchors here — spans full viewport width */
+    }
+    .header-inner nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none; /* pass clicks through to siblings */
+        z-index: 1;
+    }
+    .header-inner nav > * {
+        pointer-events: auto; /* re-enable on actual links */
+    }
+    /* Keep actions above the nav overlay */
+    .header-inner > div {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+/* ── Header row ── */
+.header-row {
+    display: flex;
+    align-items: stretch;
+    height: 5rem; /* h-20 */
+    width: 100%;
+}
+
+/* ── Mobile Menu ── */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 83px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-bottom: 3px solid #6B0F1A;
+    box-shadow: 0 8px 32px rgba(61, 4, 8, 0.14);
+    z-index: 48;
+    padding: 0 1.5rem 1.5rem;
+    flex-direction: column;
+    gap: 0.125rem;
+    max-height: calc(100vh - 83px);
+    overflow-y: auto;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+/* Logo / brand at top of mobile menu */
+.mobile-menu-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 0 0.875rem;
+    margin-bottom: 0.375rem;
+    border-bottom: 2px solid #6B0F1A;
+    flex-shrink: 0;
+}
+
+.mobile-menu-brand img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.mobile-menu-brand span {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1rem;
+    color: #6B0F1A;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.mobile-menu a {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #564241;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0eded;
+    text-decoration: none;
+    transition: color 0.15s, padding-left 0.15s;
+}
+
+.mobile-menu a:hover {
+    color: #6B0F1A;
+    padding-left: 4px;
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu .apply-btn {
+    margin-top: 0.75rem;
+    background: #6B0F1A;
+    color: #ffffff !important;
+    text-align: center;
+    padding: 0.65rem 1rem !important;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    border-bottom: none !important;
+}
+
+.mobile-menu .apply-btn:hover {
+    background: #3D0408;
+    padding-left: 0 !important;
+}
+
+/* ── Hamburger Button ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: #6B0F1A;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Responsive Breakpoints ── */
+
+/* Tablet landscape - compress nav */
+@media (max-width: 1200px) {
+    .header-inner nav { gap: 1.25rem; }
+    .header-inner nav a, .header-inner nav div > a { font-size: 0.75rem; }
+}
+
+/* Tablet - hide desktop nav, show hamburger */
+@media (max-width: 1024px) {
+    .logo-block { padding: 0 24px 0 16px; gap: 10px; }
+    .logo-block img { height: 36px; width: 36px; }
+    .header-inner { padding: 0 1rem; }
+    .hamburger { display: flex; }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) {
+    .logo-block .college-name { display: none; }
+    .logo-block { padding: 0 22px 0 14px; border-bottom-right-radius: 36px; }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    .logo-block img { height: 30px; width: 30px; }
+    .logo-block { padding: 0 18px 0 12px; border-bottom-right-radius: 28px; }
+}
+
+/* ── General Mobile / Body Responsiveness ── */
+
+/* Prevent horizontal overflow on mobile */
+body { overflow-x: hidden; }
+
+/* Make images fluid */
+img { max-width: 100%; }
+
+/* Responsive font sizes for headings */
+@media (max-width: 768px) {
+    .font-h1, [class*="text-h1"] { font-size: clamp(1.75rem, 7vw, 3.5rem) !important; }
+    .font-h2, [class*="text-h2"] { font-size: clamp(1.4rem, 5vw, 2.5rem) !important; }
+    .font-h3, [class*="text-h3"] { font-size: clamp(1.1rem, 4vw, 1.75rem) !important; }
+    [class*="px-8"] { padding-left: 1.25rem; padding-right: 1.25rem; }
+    [class*="px-12"] { padding-left: 1.25rem; padding-right: 1.25rem; }
+    [class*="py-24"] { padding-top: 4rem; padding-bottom: 4rem; }
+    [class*="py-20"] { padding-top: 3rem; padding-bottom: 3rem; }
+}
+
+@media (max-width: 480px) {
+    [class*="px-8"] { padding-left: 1rem; padding-right: 1rem; }
+    [class*="grid-cols-3"] { grid-template-columns: 1fr !important; }
+    [class*="grid-cols-2"] { grid-template-columns: 1fr !important; }
+}
+
+/* Footer mobile fix */
+@media (max-width: 768px) {
+    footer .grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+}

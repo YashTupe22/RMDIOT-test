@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -33,64 +33,64 @@ tailwind.config = {
 }
 </script>
 <style>.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; }</style>
+<link rel="stylesheet" href="Assets/header.css"/>
 </head>
 <body class="bg-background text-on-background font-body">
-<header class="sticky top-0 w-full z-50 border-b-[3px] border-[#6B0F1A] bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm">
-<div class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto">
-<a class="text-lg font-black font-['Playfair_Display'] text-[#6B0F1A] dark:text-amber-500 uppercase tracking-tighter" href="index.html">
-                RMDIOT Polytechnic
-            </a>
-<nav class="hidden lg:flex items-center space-x-8 font-['Playfair_Display'] text-sm tracking-wide uppercase font-semibold">
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="index.html">Home</a>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Admissions/Admission.html">Admissions</a>
+<header class="sticky top-0 w-full z-50 border-b-[3px] border-[#6B0F1A] bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm overflow-hidden">
+<div class="header-row">
+<a class="logo-block" href="../index.html">
+    <img src="../Assets/Logo/logo.jpg" alt="RMDIOT Logo" />
+    <span class="college-name">RMDIOT<br/>Polytechnic</span>
+</a>
+<div class="header-inner">
+<nav class="hidden lg:flex items-center space-x-6 font-['Playfair_Display'] text-sm tracking-wide uppercase font-semibold">
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="../index.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="../admissions/Admission.html">Admissions</a>
 <div class="relative group py-7">
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors inline-flex items-center gap-1" href="Programmee/Programmes.html">Programmes<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
-<div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full min-w-[250px] bg-white border border-stone-200 shadow-xl transition-all duration-200 py-2 normal-case tracking-normal font-body z-50">
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Programmee/Programmes.html">Overview</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Programmee/Department/Computer Department/index.html">Computer Department</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Programmee/Department/Artificial Intelligence and Machine learning Department/index.html">AI & ML Department</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Programmee/Department/Automobile Deprtment/index.html">Automobile Department</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Programmee/Department/Mechanical Department/index.html">Mechanical Department</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Programmee/Facilities/index.html">Facilities</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Programmee/Facilities/Photos/index.html">Facilities Photos</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Programmee/Blog/index.html">Blog</a>
-</div>
-</div>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors inline-flex items-center gap-1" href="../Programmee/Programmes.html">Programmes<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full min-w-[220px] bg-white border border-stone-200 shadow-xl transition-all duration-200 py-2 normal-case tracking-normal font-body z-50">
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../Programmee/Programmes.html">Overview</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../Programmee/Department/Computer Department/index.html">Computer Department</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../Programmee/Department/Artificial Intelligence and Machine learning Department/index.html">AI &amp; ML Department</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../Programmee/Department/Automobile Deprtment/index.html">Automobile Department</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../Programmee/Department/Mechanical Department/index.html">Mechanical Department</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../Programmee/Facilities/index.html">Facilities</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../Programmee/Blog/index.html">Blog</a>
+</div></div>
 <div class="relative group py-7">
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors inline-flex items-center gap-1" href="Faculty/Faculty.html">Faculty<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
-<div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full min-w-[250px] bg-white border border-stone-200 shadow-xl transition-all duration-200 py-2 normal-case tracking-normal font-body z-50">
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Faculty/Faculty.html">Overview</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Faculty/Faculty details/index.html">Faculty Details</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Faculty/Photos/index.html">Faculty Photos</a>
-</div>
-</div>
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="Placements/Placement.html">Placements</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors inline-flex items-center gap-1" href="../faculty/Faculty.html">Faculty<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full min-w-[220px] bg-white border border-stone-200 shadow-xl transition-all duration-200 py-2 normal-case tracking-normal font-body z-50">
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../faculty/Faculty.html">Overview</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../faculty/Faculty details/index.html">Faculty Details</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../faculty/photos/index.html">Faculty Photos</a>
+</div></div>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors" href="../placements/Placement.html">Placements</a>
 <div class="relative group py-7">
-<a class="text-[#6B0F1A] dark:text-amber-500 font-bold border-b-2 border-[#6B0F1A] pb-1 inline-flex items-center gap-1" href="Events/index.html">Events<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
-<div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full min-w-[250px] bg-white border border-stone-200 shadow-xl transition-all duration-200 py-2 normal-case tracking-normal font-body z-50">
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Events/index.html">Events Overview</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Events/Curricular/index.html">Curricular</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Events/Co - Curricular/index.html">Co - Curricular</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Events/Extra Curricular/index.html">Extra Curricular</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="Events/Social Activities/index.html">Social Activities</a>
-</div>
-</div>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors inline-flex items-center gap-1" href="../events/index.html">Events<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full min-w-[220px] bg-white border border-stone-200 shadow-xl transition-all duration-200 py-2 normal-case tracking-normal font-body z-50">
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../events/index.html">Events Overview</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../events/curricular/index.html">Curricular</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../events/Co - Curricular/index.html">Co-Curricular</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../events/Extra Curricular/index.html">Extra Curricular</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../events/Social Activities/index.html">Social Activities</a>
+</div></div>
 <div class="relative group py-7">
-<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors inline-flex items-center gap-1" href="About Us/index.html">About Us<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
-<div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full min-w-[250px] bg-white border border-stone-200 shadow-xl transition-all duration-200 py-2 normal-case tracking-normal font-body z-50">
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="About Us/index.html">About Us</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="About Us/About Trust/index.html">About Trust</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="About Us/Adminstration/index.html">Administration</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="About Us/Board of Governments/index.html">Board of Governors</a>
-<a class="block px-4 py-3 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="About Us/Authority/index.html">Authority</a>
-</div>
-</div>
+<a class="text-stone-600 dark:text-stone-400 hover:text-[#6B0F1A] transition-colors inline-flex items-center gap-1" href="../About Us/index.html">About Us<span class="material-symbols-outlined text-[16px]">expand_more</span></a>
+<div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-0 top-full min-w-[220px] bg-white border border-stone-200 shadow-xl transition-all duration-200 py-2 normal-case tracking-normal font-body z-50">
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../About Us/index.html">About Us</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../About Us/About Trust/index.html">About Trust</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../About Us/Adminstration/index.html">Administration</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../About Us/Board of Governments/index.html">Board of Governors</a>
+<a class="block px-4 py-2.5 text-[12px] text-stone-600 hover:bg-[#6B0F1A]/5 hover:text-[#6B0F1A] transition-colors whitespace-nowrap" href="../About Us/Authority/index.html">Authority</a>
+</div></div>
 </nav>
-<div class="flex items-center space-x-6">
-<button class="material-symbols-outlined text-maroon-mid">search</button>
-<a class="bg-[#6B0F1A] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-maroon-deep transition-all duration-300 active:scale-95 shadow-lg" href="Admissions/Admission.html">
-                    Apply Now
-                </a>
+<div class="flex items-center space-x-3">
+    <button class="material-symbols-outlined text-maroon-mid hidden lg:block text-[20px]" aria-label="Search">search</button>
+    <a class="hidden lg:inline-block bg-[#6B0F1A] text-white px-5 py-2 text-xs font-bold uppercase tracking-widest hover:bg-[#3D0408] transition-all duration-300 active:scale-95 whitespace-nowrap" href="../admissions/Admission.html">Apply Now</a>
+    <button id="hamburger" class="hamburger lg:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+</div>
 </div>
 </div>
 </header>
