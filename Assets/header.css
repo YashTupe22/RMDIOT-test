@@ -16,7 +16,7 @@
     border-bottom-left-radius: 0;
     display: flex;
     align-items: center;
-    padding: 0 32px 0 20px;
+    padding: 0 26px 0 18px;
     height: 100%;
     gap: 12px;
     flex-shrink: 0;
@@ -32,15 +32,32 @@
     flex-shrink: 0;
 }
 
+.logo-block .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.1;
+    max-width: 280px;
+}
+
+.logo-block .college-prefix {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(0.55rem, 1.1vw, 0.75rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #f6e2e2;
+}
+
 .logo-block .college-name {
     font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: clamp(0.6rem, 2vw, 1rem);
-    letter-spacing: -0.02em;
+    font-weight: 800;
+    font-size: clamp(0.72rem, 1.5vw, 1.02rem);
+    letter-spacing: -0.01em;
     text-transform: uppercase;
     color: #ffffff;
-    line-height: 1;
-    white-space: nowrap; /* always one line */
+    line-height: 1.1;
+    white-space: normal;
 }
 
 /* ── Header Inner (nav + actions wrapper) ── */
@@ -132,13 +149,29 @@
     flex-shrink: 0;
 }
 
-.mobile-menu-brand span {
+.mobile-menu-brand .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.15;
+}
+
+.mobile-menu-brand .college-prefix {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 800;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #6B0F1A;
+}
+
+.mobile-menu-brand .college-name {
     font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: 1rem;
+    font-weight: 800;
+    font-size: 0.95rem;
     color: #6B0F1A;
     text-transform: uppercase;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     line-height: 1.2;
 }
 
