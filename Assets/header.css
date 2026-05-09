@@ -16,12 +16,13 @@
     border-bottom-left-radius: 0;
     display: flex;
     align-items: center;
-    padding: 0 26px 0 18px;
+    padding: 0 22px 0 16px;
     height: 100%;
     gap: 12px;
     flex-shrink: 0;
     text-decoration: none;
     transition: padding 0.2s ease, border-radius 0.2s ease;
+    max-width: 380px;
 }
 
 .logo-block img {
@@ -37,13 +38,13 @@
     flex-direction: column;
     gap: 2px;
     line-height: 1.1;
-    max-width: 280px;
+    max-width: 260px;
 }
 
 .logo-block .college-prefix {
     font-family: 'DM Sans', sans-serif;
     font-weight: 800;
-    font-size: clamp(0.55rem, 1.1vw, 0.75rem);
+    font-size: clamp(0.5rem, 0.9vw, 0.7rem);
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #f6e2e2;
@@ -52,12 +53,22 @@
 .logo-block .college-name {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
-    font-size: clamp(0.72rem, 1.5vw, 1.02rem);
+    font-size: clamp(0.68rem, 1.3vw, 0.98rem);
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: #ffffff;
     line-height: 1.1;
     white-space: normal;
+}
+
+@media (max-width: 1280px) {
+    .logo-block { max-width: 320px; }
+    .logo-block .logo-text { max-width: 220px; }
+}
+
+@media (max-width: 1024px) {
+    .logo-block { max-width: 260px; }
+    .logo-block .logo-text { max-width: 190px; }
 }
 
 /* ── Header Inner (nav + actions wrapper) ── */
