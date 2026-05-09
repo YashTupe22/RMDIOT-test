@@ -14,8 +14,8 @@ $newHeader = @'
 <header class="sticky top-0 w-full z-50 border-b-[3px] border-[#6B0F1A] bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm overflow-hidden">
 <div class="header-row">
 <a class="logo-block" href="/index.html">
-    <img src="/Assets/Logo/logo.jpg" alt="RMDIOT Logo" />
-    <span class="college-name">RMDIOT<br/>Polytechnic</span>
+    <img src="/Assets/Logo/logo.png" alt="RMDIOT Logo" />
+    <span class="college-name">RMDIOT Polytechnic</span>
 </a>
 <div class="header-inner">
 <nav class="hidden lg:flex items-center space-x-6 font-['Playfair_Display'] text-sm tracking-wide uppercase font-semibold">
@@ -72,8 +72,8 @@ $newHeader = @'
 <!-- Mobile nav panel -->
 <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-brand">
-        <img src="/Assets/Logo/logo.jpg" alt="RMDIOT Logo" />
-        <span>RMDIOT<br/>Polytechnic</span>
+        <img src="/Assets/Logo/logo.png" alt="RMDIOT Logo" />
+        <span>RMDIOT Polytechnic</span>
     </div>
     <a href="/index.html">Home</a>
     <a href="/admissions/Admission.html">Admissions</a>

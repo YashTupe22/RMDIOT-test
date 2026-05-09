@@ -35,12 +35,12 @@
 .logo-block .college-name {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: clamp(0.7rem, 1.15vw, 1rem);
+    font-size: clamp(0.6rem, 2vw, 1rem);
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #ffffff;
-    line-height: 1.2;
-    white-space: nowrap;
+    line-height: 1;
+    white-space: nowrap; /* always one line */
 }
 
 /* ── Header Inner (nav + actions wrapper) ── */
@@ -219,22 +219,22 @@
 
 /* Tablet - hide desktop nav, show hamburger */
 @media (max-width: 1024px) {
-    .logo-block { padding: 0 24px 0 16px; gap: 10px; }
-    .logo-block img { height: 36px; width: 36px; }
+    .logo-block { padding: 0 20px 0 14px; gap: 8px; }
+    .logo-block img { height: 34px; width: 34px; }
     .header-inner { padding: 0 1rem; }
     .hamburger { display: flex; }
 }
 
-/* Mobile landscape */
+/* Mobile: always show college name — just shrink the block */
 @media (max-width: 768px) {
-    .logo-block .college-name { display: none; }
-    .logo-block { padding: 0 22px 0 14px; border-bottom-right-radius: 36px; }
+    .logo-block { padding: 0 16px 0 12px; border-bottom-right-radius: 36px; gap: 8px; }
+    .logo-block img { height: 30px; width: 30px; }
+    /* college-name stays visible — font handled by clamp() */
 }
 
-/* Mobile portrait */
 @media (max-width: 480px) {
-    .logo-block img { height: 30px; width: 30px; }
-    .logo-block { padding: 0 18px 0 12px; border-bottom-right-radius: 28px; }
+    .logo-block img { height: 26px; width: 26px; }
+    .logo-block { padding: 0 14px 0 10px; border-bottom-right-radius: 24px; gap: 6px; }
 }
 
 /* ── General Mobile / Body Responsiveness ── */
