@@ -11,27 +11,10 @@
     {
       "source": "/(.*\\.html)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, must-revalidate" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
       ]
     }
-  ],
-  "redirects": [
-    { "source": "/", "destination": "/index.html", "permanent": false },
-    { "source": "/admissions", "destination": "/admissions/Admission.html", "permanent": true },
-    { "source": "/faculty", "destination": "/faculty/Faculty.html", "permanent": true },
-    { "source": "/placements", "destination": "/placements/Placement.html", "permanent": true },
-    { "source": "/events", "destination": "/events/index.html", "permanent": true },
-    { "source": "/programmes", "destination": "/Programmee/Programmes.html", "permanent": true },
-    { "source": "/about", "destination": "/About%20Us/index.html", "permanent": true }
   ]
 }
