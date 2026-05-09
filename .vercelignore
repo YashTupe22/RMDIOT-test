@@ -1,0 +1,5 @@
+# Dev utility files — do not deploy
+patch-headers.ps1
+*.ps1
+.git
+README.md
