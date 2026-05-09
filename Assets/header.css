@@ -22,7 +22,7 @@
     flex-shrink: 0;
     text-decoration: none;
     transition: padding 0.2s ease, border-radius 0.2s ease;
-    max-width: 380px;
+    max-width: 340px;
 }
 
 .logo-block img {
@@ -38,7 +38,7 @@
     flex-direction: column;
     gap: 2px;
     line-height: 1.1;
-    max-width: 260px;
+    max-width: 240px;
 }
 
 .logo-block .college-prefix {
@@ -98,6 +98,8 @@
         display: flex !important;
         align-items: center;
         justify-content: center;
+        padding-left: clamp(220px, 18vw, 320px);
+        padding-right: clamp(160px, 14vw, 260px);
         pointer-events: none; /* pass clicks through to siblings */
         z-index: 1;
     }
@@ -257,13 +259,13 @@
 
 /* Tablet landscape - compress nav */
 @media (max-width: 1200px) {
-    .header-inner nav { gap: 1.25rem; }
-    .header-inner nav a, .header-inner nav div > a { font-size: 0.75rem; }
+    .logo-block { max-width: 300px; }
+    .logo-block .logo-text { max-width: 210px; }
 }
 
 /* Tablet - hide desktop nav, show hamburger */
 @media (max-width: 1024px) {
-    .logo-block { padding: 0 20px 0 14px; gap: 8px; }
+    .logo-block { padding: 0 20px 0 14px; gap: 8px; max-width: none; }
     .logo-block img { height: 34px; width: 34px; }
     .header-inner { padding: 0 1rem; }
     .hamburger { display: flex; }
