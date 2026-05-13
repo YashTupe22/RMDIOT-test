@@ -1,11 +1,56 @@
 /* ═══════════════════════════════════════════════
    RMDIOT — Shared Header CSS
    Covers: logo-block, header-inner, mobile-menu,
-   responsive breakpoints, zoom-safe layout
+   responsive breakpoints, zoom-safe layout,
+   page-transition animation
    ═══════════════════════════════════════════════ */
 
 /* Global reset helpers */
 *, *::before, *::after { box-sizing: border-box; }
+
+/* ── Page Transition Animation ── */
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pageFadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+}
+
+body {
+    animation: pageEnter 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    overflow-x: hidden;
+}
+
+body.page-exit {
+    animation: pageFadeOut 0.28s cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+/* Keep header stable during page transitions */
+body > header {
+    animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    body.page-exit {
+        animation: none !important;
+    }
+}
 
 /* ── Logo Block ── */
 .logo-block {
@@ -81,35 +126,35 @@
     padding: 0 1.5rem;
     height: 100%;
     overflow: visible;
-    /* NOTE: no position:relative here — nav must anchor to header-row */
+    position: relative;
 }
 
-/* True-centre the nav across the FULL header width */
+/* True-centre the nav within header-inner */
 @media (min-width: 1024px) {
-    .header-row {
-        position: relative; /* nav anchors here — spans full viewport width */
+    .header-inner {
+        gap: 0;
     }
     .header-inner nav {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        display: flex !important;
+        flex: 1;
+        display: flex;
         align-items: center;
         justify-content: center;
-        padding-left: clamp(220px, 18vw, 320px);
-        padding-right: clamp(160px, 14vw, 260px);
-        pointer-events: none; /* pass clicks through to siblings */
+        padding-left: 0;
+        padding-right: 0;
+        height: 100%;
         z-index: 1;
     }
-    .header-inner nav > * {
-        pointer-events: auto; /* re-enable on actual links */
+    /* Constrain dropdown triggers to header height */
+    .header-inner nav > .relative.group {
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
-    /* Keep actions above the nav overlay */
+    /* Keep actions above the nav */
     .header-inner > div {
         position: relative;
         z-index: 2;
+        flex-shrink: 0;
     }
 }
 
@@ -119,6 +164,8 @@
     align-items: stretch;
     height: 5rem; /* h-20 */
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 /* ── Mobile Menu ── */
@@ -285,8 +332,6 @@
 
 /* ── General Mobile / Body Responsiveness ── */
 
-/* Prevent horizontal overflow on mobile */
-body { overflow-x: hidden; }
 
 /* Make images fluid */
 img { max-width: 100%; }
